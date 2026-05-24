@@ -607,7 +607,7 @@ body::after{
     <div class="divider reveal"></div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>I'm a <strong>Software Engineer</strong> and <strong>Digital Strategist</strong> passionate about pushing the boundaries of what the web can do. I build products that are technically solid and visually unforgettable.</p>
+        <p>I'm a <strong>16 YEARS OLD Software Engineer</strong> and <strong>Digital Strategist</strong> passionate about pushing the boundaries of what the web can do. I build products that are technically solid and visually unforgettable.</p>
         <p>My work spans full-stack development, AI-powered applications, digital marketing, and brand strategy — always with a focus on creating meaningful, functional experiences.</p>
         <p>I'm also the creator of <strong>Skypics</strong> — a next-generation <strong>3D AI social media platform</strong> focused on nature and sky photography. Think Instagram meets AI meets the metaverse.</p>
         <p>Outside of building, I'm preparing for an exciting move to <strong>Germany</strong>, studying the language and culture with the same intensity I bring to my code.</p>
@@ -723,22 +723,73 @@ body::after{
         </div>
       </div>
 
-      <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="ryansstudio19@gmail.com" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Message →</button>
-        <div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</div>
-      </form>
+      <form class="contact-form reveal" id="contactForm">
+
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="John Doe" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="your@email.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+  </div>
+
+  <button type="submit" class="form-submit">
+    Send Message →
+  </button>
+
+  <div class="form-success" id="formSuccess" style="display:none;">
+    ✅ Message sent! I'll get back to you soon.
+  </div>
+
+</form>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("fPiugJ-d2gR4mHXcE");
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    emailjs.send("service_braixwi", "template_hqbt2jk", {
+
+        from_name: document.getElementById("name").value,
+
+        from_email: document.getElementById("email").value,
+
+        message: document.getElementById("message").value
+
+    })
+
+    .then(function() {
+
+        document.getElementById("formSuccess").style.display = "block";
+
+        document.getElementById("contactForm").reset();
+
+    })
+
+    .catch(function(error) {
+
+        alert("FAILED TO SEND MESSAGE");
+
+        console.log(error);
+
+    });
+
+});
+
+</script>
     </div>
   </div>
 </section>
