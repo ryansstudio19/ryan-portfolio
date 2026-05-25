@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skypics — Ryan Zannah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;z-index:1;}
+.back-btn{display:inline-flex;align-items:center;gap:0.5rem;color:var(--sky);text-decoration:none;font-family:'Orbitron',monospace;font-size:0.75rem;letter-spacing:0.1em;border:1px solid var(--border);padding:0.6rem 1.2rem;border-radius:4px;margin-bottom:2rem;transition:background 0.2s,transform 0.2s;background:rgba(0,212,255,0.05);}
+.back-btn:hover{background:rgba(0,212,255,0.1);transform:translateX(-3px);}
+.page-badge{display:inline-flex;align-items:center;gap:0.6rem;border:1px solid var(--border);padding:0.4rem 1.2rem;border-radius:2px;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--sky);margin-bottom:1.5rem;background:rgba(0,212,255,0.05);}
+.page-title{font-family:'Orbitron',monospace;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1.05;margin-bottom:1rem;}
+.page-title span{background:linear-gradient(90deg,var(--sky),var(--indigo),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradShift 4s ease infinite;}
+@keyframes gradShift{0%,100%{background-position:0%}50%{background-position:100%}}
+.page-sub{color:var(--muted);font-size:1.1rem;max-width:600px;line-height:1.8;font-weight:300;}
+.section-inner{max-width:1100px;margin:0 auto;padding:5rem 2rem;position:relative;z-index:1;}
+.section-label{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:0.75rem;font-family:'Orbitron',monospace;}
+.section-title{font-family:'Orbitron',monospace;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:2rem;line-height:1.1;}
+.section-title span{background:linear-gradient(90deg,var(--sky),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.divider{width:60px;height:2px;background:linear-gradient(90deg,var(--sky),transparent);margin-bottom:2.5rem;}
+.desc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.desc-text p{color:var(--muted);font-size:1rem;line-height:1.9;margin-bottom:1rem;font-weight:300;}
+.desc-text strong{color:var(--sky);}
+.feature-list{display:flex;flex-direction:column;gap:0.75rem;}
+.feature-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;transition:border-color 0.3s,transform 0.2s;}
+.feature-item:hover{border-color:rgba(0,212,255,0.4);transform:translateX(4px);}
+.feature-icon{font-size:1.4rem;width:36px;text-align:center;flex-shrink:0;}
+.feature-info p{font-family:'Orbitron',monospace;font-size:0.8rem;font-weight:700;margin-bottom:0.2rem;}
+.feature-info span{font-size:0.78rem;color:var(--muted);}
+.photos-section{border-top:1px solid var(--border);}
+.photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.photo-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;transition:border-color 0.3s,transform 0.3s;cursor:pointer;}
+.photo-card:hover{border-color:rgba(0,212,255,0.5);transform:translateY(-4px);}
+.photo-card .photo-label{position:absolute;bottom:0;left:0;right:0;padding:0.75rem;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);font-size:0.75rem;color:var(--muted);letter-spacing:0.1em;font-family:'Orbitron',monospace;}
+.photo-placeholder{background:linear-gradient(135deg,#020d1a,#04294a);width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;}
+.photo-placeholder span:first-child{font-size:2.5rem;}
+.photo-placeholder span:last-child{font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;font-family:'Orbitron',monospace;}
+.stack-section{border-top:1px solid var(--border);}
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.stack-item{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:1.2rem;text-align:center;transition:border-color 0.3s,transform 0.2s;}
+.stack-item:hover{border-color:rgba(0,212,255,0.4);transform:translateY(-3px);}
+.stack-item p{font-family:'Orbitron',monospace;font-size:0.78rem;font-weight:700;margin-top:0.5rem;}
+.stack-item span{font-size:0.7rem;color:var(--muted);}
+.cta-section{border-top:1px solid var(--border);text-align:center;}
+.cta-section h2{font-family:'Orbitron',monospace;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:900;margin-bottom:1rem;}
+.cta-section p{color:var(--muted);margin-bottom:2rem;font-size:1rem;}
+.btn-glow{padding:0.85rem 2.2rem;background:linear-gradient(135deg,var(--sky),var(--indigo));color:#fff;font-weight:700;font-family:'Orbitron',monospace;font-size:0.75rem;letter-spacing:0.1em;border:none;border-radius:4px;text-decoration:none;display:inline-block;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 0 30px rgba(0,212,255,0.3);}
+.btn-glow:hover{transform:translateY(-3px);box-shadow:0 0 50px rgba(0,212,255,0.5);}
+@media(max-width:768px){.desc-grid{grid-template-columns:1fr;gap:2rem}.photos-grid{grid-template-columns:1fr 1fr}.section-inner{padding:3rem 1.5rem}}
+@media(max-width:480px){.photos-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About Me</a>
+  <a href="index.html#projects" onclick="closeMenu()">Projects</a>
+  <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+</div>
+<nav>
+  <a href="index.html" class="logo">RZ<span style="-webkit-text-fill-color:rgba(0,212,255,0.5)">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <a href="index.html" class="back-btn">← Back to Portfolio</a>
+  <div class="page-badge">🚀 Main Project</div>
+  <h1 class="page-title">SKY<span>PICS</span></h1>
+  <p class="page-sub">A next-generation AI-powered 3D social media platform dedicated to nature and sky photography. The future of visual social media.</p>
+</div>
+
+<div class="section-inner">
+  <span class="section-label reveal">// Overview</span>
+  <h2 class="section-title reveal">What is <span>Skypics?</span></h2>
+  <div class="divider reveal"></div>
+  <div class="desc-grid">
+    <div class="desc-text reveal">
+      <p>Skypics is my <strong>flagship project</strong> — a social media platform unlike anything that exists today. It's built specifically for people who love capturing the beauty of the sky, nature, clouds, sunsets, and everything in between.</p>
+      <p>Unlike Instagram or other platforms, Skypics is <strong>100% focused on nature photography</strong>. No selfies, no food, no ads — just pure, breathtaking sky and nature content.</p>
+      <p>The platform uses <strong>AI to moderate, enhance, and categorize</strong> every photo uploaded. Bad photos get filtered out automatically. Great photos get showcased in a stunning <strong>3D immersive environment</strong>.</p>
+      <p>Think of it as <strong>Instagram meets the Metaverse meets AI</strong> — all built around the beauty of the natural world.</p>
+    </div>
+    <div class="feature-list reveal">
+      <div class="feature-item"><div class="feature-icon">🤖</div><div class="feature-info"><p>AI Moderation</p><span>Auto-filters and enhances every upload</span></div></div>
+      <div class="feature-item"><div class="feature-icon">🌌</div><div class="feature-info"><p>3D Environment</p><span>Immersive 3D photo exploration</span></div></div>
+      <div class="feature-item"><div class="feature-icon">📸</div><div class="feature-info"><p>Sky & Nature Only</p><span>Dedicated niche — zero clutter</span></div></div>
+      <div class="feature-item"><div class="feature-icon">👥</div><div class="feature-info"><p>Social Features</p><span>Follow, like, comment, share</span></div></div>
+      <div class="feature-item"><div class="feature-icon">🏆</div><div class="feature-info"><p>Photo Rankings</p><span>AI-ranked leaderboards daily</span></div></div>
+      <div class="feature-item"><div class="feature-icon">🔒</div><div class="feature-info"><p>Privacy First</p><span>Your data stays yours</span></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="photos-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Gallery</span>
+    <h2 class="section-title reveal">Project <span>Previews</span></h2>
+    <div class="divider reveal"></div>
+    <div class="photos-grid">
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>🌅</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Sunset Capture</div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>⛅</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Cloud Formation</div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>🌌</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Night Sky</div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>🌈</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Rainbow Sky</div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>🌊</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Ocean Horizon</div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="photo-placeholder"><span>🏔️</span><span>Add Your Photo</span></div>
+        <div class="photo-label">// Mountain View</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stack-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Tech Stack</span>
+    <h2 class="section-title reveal">Built <span>With</span></h2>
+    <div class="divider reveal"></div>
+    <div class="stack-grid">
+      <div class="stack-item reveal"><div style="font-size:1.8rem">🐍</div><p>Python</p><span>Backend</span></div>
+      <div class="stack-item reveal"><div style="font-size:1.8rem">🤖</div><p>AI/ML</p><span>Moderation</span></div>
+      <div class="stack-item reveal"><div style="font-size:1.8rem">🌐</div><p>Three.js</p><span>3D Engine</span></div>
+      <div class="stack-item reveal"><div style="font-size:1.8rem">⚛️</div><p>React</p><span>Frontend</span></div>
+      <div class="stack-item reveal"><div style="font-size:1.8rem">🗄️</div><p>Database</p><span>Storage</span></div>
+      <div class="stack-item reveal"><div style="font-size:1.8rem">☁️</div><p>Cloud</p><span>Hosting</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="section-inner">
+    <h2 class="reveal">Interested in <span style="background:linear-gradient(90deg,var(--sky),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Skypics?</span></h2>
+    <p class="reveal">Follow the journey or get in touch to collaborate.</p>
+    <a href="index.html#contact" class="btn-glow reveal">Get In Touch →</a>
+  </div>
+</div>
+
+<footer><p>© 2026 RYAN ZANNAH — Built with precision, passion & vision.</p></footer>
+<script src="shared.js"></script>
+</body>
+</html>
