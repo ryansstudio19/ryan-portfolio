@@ -35,3 +35,14 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .reveal.visible{opacity:1;transform:none}
 footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:0.8rem;letter-spacing:0.1em;position:relative;z-index:1;font-family:'Orbitron',monospace;}
 @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}nav{padding:1rem 1.5rem}}
+.portfolio-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.photo-card{
+    overflow:hidden;
+    border-radius:20px;
+}
