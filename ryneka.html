@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="shared.css">
 <style>
 .page-hero{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;z-index:1}.back-btn{display:inline-flex;align-items:center;gap:.5rem;color:var(--sky);text-decoration:none;font-family:Orbitron,monospace;font-size:.75rem;letter-spacing:.1em;border:1px solid var(--border);padding:.6rem 1.2rem;border-radius:4px;margin-bottom:2rem;background:rgba(0,212,255,.05)}.page-badge{border:1px solid rgba(0,229,255,.35);padding:.4rem 1.2rem;border-radius:2px;color:var(--sky);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;background:rgba(0,229,255,.05)}.page-title{font-family:Orbitron,monospace;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;margin-bottom:1rem}.page-title span{background:linear-gradient(90deg,#00e5ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.page-sub{color:var(--muted);font-size:1.1rem;max-width:680px;line-height:1.8;font-weight:300}.section-inner{max-width:1100px;margin:0 auto;padding:5rem 2rem;position:relative;z-index:1}.section-label{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);margin-bottom:.75rem;font-family:Orbitron,monospace}.section-title{font-family:Orbitron,monospace;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:2rem}.section-title span{background:linear-gradient(90deg,#00e5ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.divider{width:60px;height:2px;background:linear-gradient(90deg,var(--sky),transparent);margin-bottom:2.5rem}.concept-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem}.concept-copy p{color:var(--muted);font-size:1rem;line-height:1.9;margin-bottom:1rem}.concept-copy strong{color:var(--sky)}.values{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.value-card{padding:1.25rem;background:rgba(0,229,255,.03);border:1px solid var(--border);border-radius:10px}.value-card h3{font-family:Orbitron,monospace;font-size:.78rem;margin-bottom:.4rem}.value-card p{color:var(--muted);font-size:.82rem;line-height:1.5}.status-section{border-top:1px solid var(--border);text-align:center}.status-line{display:inline-block;padding:1rem 1.5rem;border:1px solid rgba(124,58,237,.4);border-radius:8px;color:var(--text);background:rgba(124,58,237,.08);font-family:Orbitron,monospace;font-size:.78rem;letter-spacing:.08em}.btn-glow{padding:.85rem 2.2rem;background:linear-gradient(135deg,var(--sky),var(--indigo));color:#fff;font-weight:700;font-family:Orbitron,monospace;font-size:.75rem;letter-spacing:.1em;border-radius:4px;text-decoration:none;display:inline-block;margin-top:2rem}@media(max-width:768px){.concept-grid{grid-template-columns:1fr}.section-inner{padding:3rem 1.5rem}.values{grid-template-columns:1fr}}
+.ryneka-section{border-top:1px solid var(--border)}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.info-card{padding:1.35rem;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px}.info-card h3{font-family:Orbitron,monospace;font-size:.8rem;color:var(--text);margin-bottom:.6rem}.info-card p{color:var(--muted);font-size:.85rem;line-height:1.7}.user-list{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}.user-chip,.tech-chip{border:1px solid rgba(0,229,255,.25);border-radius:3px;padding:.35rem .65rem;color:var(--sky);font-family:Orbitron,monospace;font-size:.65rem;letter-spacing:.05em;background:rgba(0,229,255,.04)}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:.65rem;align-items:stretch}.flow-step{padding:1rem .7rem;text-align:center;border:1px solid var(--border);border-radius:8px;background:rgba(124,58,237,.05);color:var(--text);font-family:Orbitron,monospace;font-size:.68rem;line-height:1.5}.flow-step span{display:block;color:var(--sky);font-size:1.2rem;margin-bottom:.4rem}.tech-list{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}@media(max-width:768px){.info-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow-step:last-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -17,6 +18,46 @@
 <nav><a href="index.html" class="logo">RZ<span style="-webkit-text-fill-color:rgba(0,212,255,0.5)">.</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#contact" class="nav-cta">Contact</a></li></ul><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav>
 <div class="page-hero"><a href="index.html" class="back-btn">← Back to Portfolio</a><div class="page-badge">Concept · In Planning</div><h1 class="page-title">RYNE<span>KA</span></h1><p class="page-sub">The Future Thinks With You.</p><p class="page-sub">An open, privacy-first AI operating system that helps you think, create, and automate — built to keep you in control, not replace you.</p></div>
 <div class="section-inner"><span class="section-label reveal">// Direction</span><h2 class="section-title reveal">An AI layer for <span>your workflow</span></h2><div class="divider reveal"></div><div class="concept-grid"><div class="concept-copy reveal"><p>RYNEKA is a concept-stage product under <strong>QORVAYN</strong>. It is imagined as an intelligent layer across a person’s digital workflow rather than another chatbot competing for attention.</p><p>The project is still in the concept and planning phase. The goal is to explore a modular, open-source-leaning system that makes powerful assistance accessible while preserving human agency and privacy.</p></div><div class="values reveal"><div class="value-card"><h3>Open Source First</h3><p>Build trust through openness and participation.</p></div><div class="value-card"><h3>Privacy First</h3><p>Keep people and their data in control.</p></div><div class="value-card"><h3>Free Before Paid</h3><p>Make the core experience broadly accessible.</p></div><div class="value-card"><h3>Modular Design</h3><p>Adapt to different workflows and needs.</p></div></div></div></div>
+
+<div class="ryneka-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Mission & Vision</span>
+    <h2 class="section-title reveal">More than a <span>chatbot</span></h2>
+    <div class="divider reveal"></div>
+    <div class="info-grid">
+      <article class="info-card reveal"><h3>Mission</h3><p>To build a free, intelligent, and privacy-first AI operating system that helps people think, create, and automate their digital lives using open-source technologies. AI should work with the user, not take control away.</p></article>
+      <article class="info-card reveal"><h3>Long-Term Vision</h3><p>RYNEKA aims to explore an AI-native computing experience: an ecosystem where intelligence is woven into everyday work instead of being limited to a standalone application.</p></article>
+      <article class="info-card reveal"><h3>What Makes It Different</h3><p>Traditional AI waits for a question. RYNEKA is imagined as a contextual layer that can understand workflow, assist with thinking, help create, and automate actions while the user remains the final authority.</p></article>
+      <article class="info-card reveal"><h3>Performance & Craft</h3><p>The experience should feel fast, lightweight, calm, and polished: futuristic without becoming visually chaotic, with thoughtful micro-interactions and a beautiful interface.</p></article>
+    </div>
+  </div>
+</div>
+<div class="ryneka-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Who It Is For</span>
+    <h2 class="section-title reveal">Built for people who <span>create</span></h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="color:var(--muted);line-height:1.8;max-width:700px">RYNEKA is intended for people who use computers heavily and want AI integrated into their everyday workflow without surrendering ownership or control.</p>
+    <div class="user-list reveal"><span class="user-chip">Students</span><span class="user-chip">Developers</span><span class="user-chip">Designers</span><span class="user-chip">Freelancers</span><span class="user-chip">Content Creators</span><span class="user-chip">Small Businesses</span><span class="user-chip">Researchers</span></div>
+  </div>
+</div>
+<div class="ryneka-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Product Philosophy</span>
+    <h2 class="section-title reveal">The computer becomes an <span>intelligent environment</span></h2>
+    <div class="divider reveal"></div>
+    <div class="flow reveal"><div class="flow-step"><span>01</span>User brings context</div><div class="flow-step"><span>02</span>RYNEKA understands</div><div class="flow-step"><span>03</span>Helps think</div><div class="flow-step"><span>04</span>Creates & automates</div><div class="flow-step"><span>05</span>User stays in control</div></div>
+  </div>
+</div>
+<div class="ryneka-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Technical Direction</span>
+    <h2 class="section-title reveal">Modular by <span>design</span></h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="color:var(--muted);line-height:1.8;max-width:760px">The technical direction favors modular architecture, strong performance, open-source technologies, and practical AI integration. These are planning preferences, not a claim that the product has already been built.</p>
+    <div class="tech-list reveal"><span class="tech-chip">Next.js</span><span class="tech-chip">React.js</span><span class="tech-chip">Tailwind CSS</span><span class="tech-chip">Three.js</span><span class="tech-chip">React Three Fiber</span><span class="tech-chip">GLSL / Shaders</span><span class="tech-chip">GSAP</span><span class="tech-chip">Framer Motion</span><span class="tech-chip">Lenis</span><span class="tech-chip">Blender / GLTF</span></div>
+  </div>
+</div>
 <div class="status-section"><div class="section-inner"><span class="section-label reveal">// Current Status</span><h2 class="section-title reveal">Planning before <span>building</span></h2><div class="divider reveal" style="margin-left:auto;margin-right:auto"></div><p class="status-line reveal">Currently in the concept &amp; planning phase.</p><br><a href="index.html#contact" class="btn-glow reveal">Follow the Build →</a></div></div>
 <footer><p>© 2026 QORVAYN — Built with precision, passion & vision.</p></footer><script src="shared.js"></script>
 </body></html>
