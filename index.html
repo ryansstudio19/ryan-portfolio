@@ -113,6 +113,7 @@ section{position:relative;z-index:1}
 .form-success{display:none;padding:0.8rem 1rem;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.3);border-radius:6px;color:#4ade80;font-size:0.9rem;}
 @media(max-width:768px){.about-grid,.contact-wrapper{grid-template-columns:1fr;gap:2rem}.skills-grid{grid-template-columns:1fr 1fr}.hero-3d-card{width:240px;height:140px}.form-submit{width:100%;text-align:center}}
 @media(max-width:480px){.skills-grid{grid-template-columns:1fr}.section-inner{padding:5rem 1.5rem}}
+.services-section{border-top:1px solid var(--border)}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}.service-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:1.35rem;transition:border-color .3s,transform .2s,box-shadow .3s}.service-card:hover{border-color:rgba(0,212,255,.5);transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,212,255,.08)}.service-icon{font-size:1.7rem;margin-bottom:.8rem}.service-card h3{font-family:'Orbitron',monospace;font-size:.78rem;line-height:1.45;margin-bottom:.5rem}.service-card p{color:var(--muted);font-size:.82rem;line-height:1.65}@media(max-width:480px){.services-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -173,13 +174,31 @@ section{position:relative;z-index:1}
         <p>Want to know more about me? <a href="about.html" style="color:var(--sky);text-decoration:none;font-weight:600;">Visit my About page →</a></p>
       </div>
       <div class="skills-grid reveal">
+        <div class="skill-card"><div class="skill-icon">⚛️</div><div class="skill-info"><p>Next.js / React.js</p><span>Frontend & App Architecture</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-info"><p>Three.js / R3F / drei</p><span>3D & Interactive Web</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🎨</div><div class="skill-info"><p>Tailwind CSS</p><span>Styling & Design Systems</span></div></div>
+        <div class="skill-card"><div class="skill-icon">✨</div><div class="skill-info"><p>GSAP / Motion / Lenis</p><span>Animation & Smooth Scrolling</span></div></div>
         <div class="skill-card"><div class="skill-icon">🐍</div><div class="skill-info"><p>Python</p><span>Backend & Scripting</span></div></div>
-        <div class="skill-card"><div class="skill-icon">🎨</div><div class="skill-info"><p>HTML/CSS</p><span>Frontend & UI</span></div></div>
-        <div class="skill-card"><div class="skill-icon">📣</div><div class="skill-info"><p>Marketing</p><span>Strategy & Growth</span></div></div>
-        <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-info"><p>AI/ML</p><span>Building with AI</span></div></div>
-        <div class="skill-card"><div class="skill-icon">⚡</div><div class="skill-info"><p>Branding</p><span>Identity & Design</span></div></div>
-        <div class="skill-card"><div class="skill-icon">🇩🇪</div><div class="skill-info"><p>PREPARING FOR</p><span>BEING A GERMAN</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-info"><p>AI Integration</p><span>Building with AI</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🧩</div><div class="skill-info"><p>HTML / CSS</p><span>Semantic UI Foundations</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🇩🇪</div><div class="skill-info"><p>German · B1</p><span>Preparing for Germany</span></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="services" class="services-section">
+  <div class="section-inner">
+    <span class="section-label reveal">// Capabilities</span>
+    <h2 class="section-title reveal">What I <span>Can Do</span></h2>
+    <div class="divider reveal"></div>
+    <div class="services-grid">
+      <article class="service-card reveal"><div class="service-icon">⚡</div><h3>Full-Stack Web Development</h3><p>Building complete web applications end-to-end with modern frontend architecture and backend services.</p></article>
+      <article class="service-card reveal"><div class="service-icon">🌌</div><h3>3D & Interactive Web</h3><p>Creating immersive Three.js and React Three Fiber experiences like the vision behind Skypics.</p></article>
+      <article class="service-card reveal"><div class="service-icon">🤖</div><h3>AI-Powered Prototyping</h3><p>Integrating practical AI capabilities into products, workflows, and early-stage concepts.</p></article>
+      <article class="service-card reveal"><div class="service-icon">🛒</div><h3>E-Commerce UI Systems</h3><p>Designing premium storefront interfaces and product flows for brands like GoalWear.</p></article>
+      <article class="service-card reveal"><div class="service-icon">🧭</div><h3>Digital Strategy</h3><p>Turning product ideas into clear positioning, focused experiences, and buildable next steps.</p></article>
     </div>
   </div>
 </section>
