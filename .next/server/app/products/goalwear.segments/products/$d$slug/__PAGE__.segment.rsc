@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+3:I[97367,["/_next/static/chunks/33dnn1fxd3nd0.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[97367,["/_next/static/chunks/33dnn1fxd3nd0.js"],"ViewportBoundary"]
+9:I[97367,["/_next/static/chunks/33dnn1fxd3nd0.js"],"MetadataBoundary"]
+b:I[39756,["/_next/static/chunks/33dnn1fxd3nd0.js"],"default"]
+c:I[37457,["/_next/static/chunks/33dnn1fxd3nd0.js"],"default"]
+10:I[99740,["/_next/static/chunks/33dnn1fxd3nd0.js"],"Layout"]
+11:I[22016,["/_next/static/chunks/33dnn1fxd3nd0.js"],""]
+:HL["/_next/static/chunks/22blb79kljojb.css","style"]
+7:X
+e:X
+e:C
+0:{"buildId":"Nk9GcrbZjXbOkxXsk8mNA","data":[{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"QORVAYN — Human-centered technology"}],["$","meta","1",{"name":"description","content":"QORVAYN builds intelligent digital products designed to make technology more useful, accessible, creative, and human-centered."}],["$","meta","2",{"property":"og:title","content":"QORVAYN — Human-centered technology"}],["$","meta","3",{"property":"og:description","content":"Building a human-centered technology ecosystem."}],["$","meta","4",{"property":"og:type","content":"website"}],["$","meta","5",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","6",{"name":"twitter:title","content":"QORVAYN — Human-centered technology"}],["$","meta","7",{"name":"twitter:description","content":"Building a human-centered technology ecosystem."}]]}]}]}],null]}],"isPartial":"$@a","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$7","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@f","staleTime":"$7","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/22blb79kljojb.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/33dnn1fxd3nd0.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L10",null,{"children":["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}],"notFound":[["$","section",null,{"className":"container page-hero","style":{"minHeight":"70vh"},"children":[["$","div",null,{"className":"eyebrow","children":"SIGNAL LOST"}],["$","h1",null,{"children":"404"}],["$","h2",null,{"children":"Page not found."}],["$","p",null,{"children":"The page you’re looking for does not exist or may have moved."}],["$","div",null,{"className":"hero-actions","children":[["$","$L11",null,{"className":"btn btn-primary","href":"/","children":"Go to homepage"}],["$","$L11",null,{"className":"btn btn-ghost","href":"/products","children":"Explore products"}]]}]]}],[]]}]}]}]}]]}],"isPartial":"$@12","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@13","rootVaryParams":null,"needsRuntimeRequest":"$@14"}
+2:E{"digest":"NEXT_HTTP_ERROR_FALLBACK;404"}
+5:null
+7:300
+14:true
+7:C
+13:0
+a:"$undefined"
+d:"$undefined"
+f:"$undefined"
+12:"$undefined"
+6:"$undefined"

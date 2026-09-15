@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import './globals.css';import {Layout} from '@/components/shared';
+export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'https://qorvayn.com'),title:{default:'QORVAYN — Human-centered technology',template:'%s — QORVAYN'},description:'QORVAYN builds intelligent digital products designed to make technology more useful, accessible, creative, and human-centered.',openGraph:{title:'QORVAYN — Human-centered technology',description:'Building a human-centered technology ecosystem.',type:'website'},twitter:{card:'summary_large_image'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><Layout>{children}</Layout></body></html>}
