@@ -25,7 +25,7 @@ export default function About() {
         gradientWords={['work']}
         aside={
           <TiltCard className="photo" max={6} style={{ aspectRatio: '4 / 5', maxWidth: 420, marginInline: 'auto' }}>
-            <Img src={photos.office.src} alt={photos.office.alt} sizes="(max-width: 900px) 90vw, 40vw" priority />
+            <Img src={photos.portrait.src} alt={photos.portrait.alt} sizes="(max-width: 900px) 90vw, 40vw" priority style={{ objectPosition: '50% 30%' }} />
             <span className="hud" aria-hidden="true"><i /><i /><i /><i /></span>
             <span className="photo-caption">Ryan Zannah</span>
           </TiltCard>
@@ -42,8 +42,8 @@ export default function About() {
         <div className="container split">
           <Parallax offset={30}>
             <Reveal from="left">
-              <TiltCard className="photo" max={5} style={{ aspectRatio: '1 / 1', maxWidth: 460 }}>
-                <Img src={photos.mono.src} alt={photos.mono.alt} sizes="(max-width: 900px) 90vw, 40vw" />
+              <TiltCard className="photo" max={5} style={{ aspectRatio: '4 / 3.4', maxWidth: 540 }}>
+                <Img src={photos.sky.src} alt={photos.sky.alt} sizes="(max-width: 900px) 90vw, 45vw" style={{ objectPosition: '50% 40%' }} />
                 <span className="hud" aria-hidden="true"><i /><i /><i /><i /></span>
               </TiltCard>
             </Reveal>

@@ -18,7 +18,6 @@ export const photos = {
   rooftop: { src: '/images/ryan/rooftop', w: 1000, h: 1197, alt: 'Ryan Zannah on a rooftop garden in Dhaka' },
   sky: { src: '/images/ryan/sky', w: 1240, h: 797, alt: 'Ryan Zannah against a clear blue sky' },
   portrait: { src: '/images/ryan/portrait', w: 880, h: 1404, alt: 'Close portrait of Ryan Zannah in a white shirt' },
-  mono: { src: '/images/ryan/mono', w: 800, h: 800, alt: 'Black and white portrait of Ryan Zannah' },
 } as const;
 
 // widths available on disk for each photo (see public/images)
@@ -27,7 +26,6 @@ export const photoWidths: Record<string, number[]> = {
   '/images/ryan/rooftop': [600, 1000],
   '/images/ryan/sky': [700, 1240],
   '/images/ryan/portrait': [560, 880],
-  '/images/ryan/mono': [480, 800],
   '/images/brand/qorvayn': [240, 640],
 };
 
