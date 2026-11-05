@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/skypics", "destination": "/eskypixx", "permanent": true },
+    { "source": "/skypics.html", "destination": "/eskypixx", "permanent": true }
+  ]
+}

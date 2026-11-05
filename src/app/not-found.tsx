@@ -1,1 +1,15 @@
-import Link from 'next/link';export default function NotFound(){return <section className="container page-hero" style={{minHeight:'70vh'}}><div className="eyebrow">SIGNAL LOST</div><h1>404</h1><h2>Page not found.</h2><p>The page you’re looking for does not exist or may have moved.</p><div className="hero-actions"><Link className="btn btn-primary" href="/">Go to homepage</Link><Link className="btn btn-ghost" href="/products">Explore products</Link></div></section>}
+import Link from 'next/link';
+import { Arrow } from '@/components/Icons';
+
+export default function NotFound() {
+  return (
+    <section className="not-found">
+      <div>
+        <p className="code grad-text">404</p>
+        <h1 className="h2" style={{ margin: '1rem 0' }}>This page doesn&apos;t exist</h1>
+        <p className="lead" style={{ margin: '0 auto 2rem' }}>The link may be old or mistyped. Head back home to find what you need.</p>
+        <Link href="/" className="btn btn-primary">Back to home <Arrow /></Link>
+      </div>
+    </section>
+  );
+}

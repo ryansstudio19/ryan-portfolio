@@ -1,2 +1,147 @@
-import Link from 'next/link';import {ArrowUpRight} from 'lucide-react';import {products,values,mission,companyDescription} from '@/data/site';import {ConceptVisual} from '@/components/shared';
-export default function Home(){return <><section className="container hero"><div><div className="eyebrow">QORVAYN TECHNOLOGY ECOSYSTEM</div><h1>Building a human-centered technology ecosystem.</h1><p>{companyDescription}</p><div className="hero-actions"><Link className="btn btn-primary" href="/products">Explore our products <ArrowUpRight size={16}/></Link><Link className="btn btn-ghost" href="/about">About QORVAYN</Link></div><div className="meta">Founded 10 March 2026 · Bangladesh · Remote-first</div></div><ConceptVisual/></section><section className="section"><div className="container"><div className="section-head"><div><div className="eyebrow">01 / ECOSYSTEM</div><h2>One ecosystem.<br/>Many possibilities.</h2></div><p>QORVAYN is growing into an ecosystem focused on intelligent software, creative digital experiences, and products designed around real human needs.</p></div><div className="grid-3">{products.map((p,i)=><Link className="card" href={'/products/'+p.slug} key={p.slug}><div className="card-top"><span className="num">0{i+1}</span><span className="arrow">↗</span></div><h3>{p.name}</h3><p>{p.description}</p><span className="label">Product vision</span></Link>)}</div></div></section><section className="section"><div className="container split"><div><div className="eyebrow">02 / MISSION</div><h2>Technology should work for people.</h2><p className="quote">“{mission}”</p></div><ConceptVisual variant="mission"/></div></section><section className="section values"><div className="container"><div className="section-head"><div><div className="eyebrow">03 / PRINCIPLES</div><h2>Built with intention.</h2></div><p>Six principles shape how QORVAYN thinks about the work ahead.</p></div><div className="grid-3">{values.map(([name,text],i)=><div className="card" key={name}><div className="num">0{i+1}</div><h3>{name}</h3><p>{text}</p></div>)}</div></div></section><section className="section"><div className="container split"><div><div className="eyebrow">04 / STORY</div><h2>Starting with a simple ambition.</h2><p>QORVAYN began on 10 March 2026 with a simple ambition: to build meaningful technology for the future. Founded by Ryan Zannah, QORVAYN is growing into a technology ecosystem focused on intelligent software, creative digital experiences, and products designed around real human needs.</p></div><div className="timeline"><div><strong>10 MARCH 2026</strong><h3>QORVAYN founded</h3></div><div><strong>TODAY</strong><h3>Building an expanding technology ecosystem</h3></div></div></div></section><section className="section"><div className="container card" style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:20,flexWrap:'wrap'}}><div><div className="eyebrow">05 / FUTURE</div><h2>The ecosystem is still expanding.</h2><p>More products are currently in development.</p></div><Link className="btn btn-primary" href="/future">See what’s next <ArrowUpRight size={16}/></Link></div></section></>}
+import Link from 'next/link';
+import ContactSection from '@/components/ContactSection';
+import HomeHero from '@/components/home/HomeHero';
+import PhotoStrip from '@/components/home/PhotoStrip';
+import QorvaynOrb from '@/components/home/QorvaynOrb';
+import { Arrow } from '@/components/Icons';
+import Img from '@/components/Img';
+import LanguageList from '@/components/LanguageList';
+import { Magnetic, Marquee, Parallax, Reveal, WordReveal } from '@/components/motion';
+import SkillGroups from '@/components/SkillGroups';
+import WorkGrid from '@/components/WorkGrid';
+import { marqueeSkills, photos, qorvayn } from '@/data/site';
+
+export default function Home() {
+  return (
+    <>
+      <HomeHero />
+      <Marquee items={marqueeSkills} tilted />
+
+      {/* About preview */}
+      <section className="section" id="about">
+        <div className="container intro-grid">
+          <div>
+            <Reveal><p className="kicker">// about me</p></Reveal>
+            <WordReveal text="I turn ideas into products people can actually use." className="h2" gradientWords={['products']} />
+            <Reveal delay={0.1}>
+              <p className="lead" style={{ marginTop: '1.4rem' }}>
+                I wrote my first Python in 2022. Today I lead QORVAYN, design and develop its products, and handle the
+                SEO, content and design work that helps them reach people.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <dl className="facts">
+                <div className="fact"><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+                <div className="fact"><dt>Leading</dt><dd>QORVAYN</dd></div>
+                <div className="fact"><dt>Focus</dt><dd>Full-stack, design, SEO</dd></div>
+                <div className="fact"><dt>Languages</dt><dd>English, Hindi + 8 more</dd></div>
+              </dl>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div style={{ marginTop: '2rem' }}>
+                <Magnetic>
+                  <Link href="/about" className="btn btn-ghost">Read my story <Arrow /></Link>
+                </Magnetic>
+              </div>
+            </Reveal>
+          </div>
+          <div className="collage">
+            <Parallax offset={40} className="photo c1">
+              <Reveal from="left" style={{ position: 'absolute', inset: 0 }}>
+                <Img src={photos.rooftop.src} alt={photos.rooftop.alt} sizes="(max-width: 900px) 60vw, 28vw" />
+              </Reveal>
+            </Parallax>
+            <Parallax offset={-50} className="photo c2">
+              <Reveal from="right" delay={0.1} style={{ position: 'absolute', inset: 0 }}>
+                <Img src={photos.sky.src} alt={photos.sky.alt} sizes="(max-width: 900px) 55vw, 24vw" />
+              </Reveal>
+            </Parallax>
+          </div>
+        </div>
+      </section>
+
+      {/* QORVAYN */}
+      <section className="section" id="qorvayn">
+        <div className="container q-grid">
+          <Reveal from="scale">
+            <QorvaynOrb />
+          </Reveal>
+          <div>
+            <Reveal><p className="kicker">// the parent company</p></Reveal>
+            <WordReveal text="QORVAYN is where everything I build comes together." className="h2" gradientWords={['QORVAYN']} />
+            <Reveal delay={0.1}>
+              <p className="lead" style={{ marginTop: '1.2rem' }}>{qorvayn.summary}</p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <div className="q-meta">
+                <span className="chip">Founded {qorvayn.founded}</span>
+                <span className="chip">{qorvayn.country}</span>
+                <span className="chip">Remote-first</span>
+                <span className="chip">Founder &amp; CEO: Ryan Zannah</span>
+              </div>
+            </Reveal>
+            <div className="mv">
+              <Reveal from="left" delay={0.1} className="panel">
+                <h3 className="h3">Mission</h3>
+                <p>{qorvayn.mission}</p>
+              </Reveal>
+              <Reveal from="right" delay={0.18} className="panel">
+                <h3 className="h3">Vision</h3>
+                <p>{qorvayn.vision}</p>
+              </Reveal>
+            </div>
+            <Reveal delay={0.2}>
+              <Magnetic>
+                <Link href="/qorvayn" className="btn btn-primary">Explore QORVAYN <Arrow /></Link>
+              </Magnetic>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Work */}
+      <section className="section" id="work">
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// selected work</p></Reveal>
+            <WordReveal text="Products in the QORVAYN ecosystem" className="h2" gradientWords={['ecosystem']} />
+          </div>
+          <WorkGrid />
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="section" id="skills">
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// skills</p></Reveal>
+            <WordReveal text="What I work with" className="h2" />
+            <Reveal delay={0.1}>
+              <p className="lead">Thirty-one skills across four areas, from writing the code to getting it found.</p>
+            </Reveal>
+          </div>
+          <SkillGroups />
+        </div>
+      </section>
+
+      <Marquee items={['Think', 'Design', 'Build', 'Ship', 'Grow', 'Repeat']} baseVelocity={1.8} />
+
+      {/* Languages */}
+      <section className="section" id="languages">
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// languages</p></Reveal>
+            <WordReveal text="Ten languages, and counting" className="h2" gradientWords={['counting']} />
+            <Reveal delay={0.1}>
+              <p className="lead">Professional working proficiency in English and Hindi, and elementary in eight more.</p>
+            </Reveal>
+          </div>
+          <LanguageList />
+        </div>
+      </section>
+
+      <PhotoStrip />
+      <ContactSection />
+    </>
+  );
+}
