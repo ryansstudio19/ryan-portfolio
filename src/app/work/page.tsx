@@ -1,14 +1,18 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/StructuredData';
 import Link from 'next/link';
 import { Arrow, Code, Layers, Sparkle, Bag, Globe, Camera } from '@/components/Icons';
 import { Magnetic, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
 import PageHero from '@/components/PageHero';
 import WorkGrid from '@/components/WorkGrid';
 
-export const metadata: Metadata = {
-  title: 'Work',
-  description: 'Products and services by Ryan Zannah: eSkypixx, RYNEKA and GoalWear, plus web development, design and SEO work.',
-};
+export const metadata: Metadata = pageMeta({
+  title: 'Work & Services',
+  path: '/work',
+  og: 'work',
+  description: 'Products and services by Ryan Zannah: eSkypixx, RYNEKA and GoalWear, plus web development, UI design, branding, SEO and content work for clients.',
+});
 
 const services = [
   { icon: Code, name: 'Web development', text: 'Full-stack websites and web apps, built fast, responsive and easy to maintain.' },
@@ -22,6 +26,7 @@ const services = [
 export default function Work() {
   return (
     <>
+      <Breadcrumbs items={[{ name: 'Work', path: '/work' }]} />
       <PageHero title="Work" gradientWords={['Work']}>
         <p className="lead">
           The products I&apos;m building inside QORVAYN, and the kind of work I take on for clients.

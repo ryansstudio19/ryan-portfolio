@@ -1,3 +1,6 @@
+import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { HomeSchema } from '@/components/StructuredData';
 import Link from 'next/link';
 import Age from '@/components/Age';
 import HomeHero from '@/components/home/HomeHero';
@@ -7,9 +10,18 @@ import { Arrow } from '@/components/Icons';
 import { Magnetic, Marquee, Reveal, WordReveal } from '@/components/motion';
 import { marqueeSkills, qorvayn } from '@/data/site';
 
+export const metadata: Metadata = pageMeta({
+  title: 'Ryan Zannah | Software Engineer & Digital Builder',
+  absoluteTitle: true,
+  path: '/',
+  og: 'home',
+  description: 'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh with 5+ years in web development, design and SEO. Founder of QORVAYN.',
+});
+
 export default function Home() {
   return (
     <>
+      <HomeSchema />
       <HomeHero />
       <Marquee items={marqueeSkills} tilted />
 

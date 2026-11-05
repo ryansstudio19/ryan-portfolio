@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/StructuredData';
 import Link from 'next/link';
 import { Arrow, Brain, Gem, Heart, Layers, Lock, Code } from '@/components/Icons';
 import { Magnetic, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
 import PageHero from '@/components/PageHero';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'RYNEKA',
-  description:
-    'RYNEKA is an AI operating system concept from QORVAYN, designed to help people think, create, automate and manage their digital lives while staying in control.',
-};
+  path: '/ryneka',
+  og: 'ryneka',
+  description: 'RYNEKA is an AI operating system concept from QORVAYN, designed to help people think, create, automate and manage their digital lives.',
+});
 
 const principles = [
   { icon: Code, name: 'Open by default', text: 'Built on open technologies, to earn trust through transparency.' },
@@ -26,6 +29,7 @@ const audience = ['Students', 'Developers', 'Designers', 'Freelancers', 'Content
 export default function Ryneka() {
   return (
     <>
+      <Breadcrumbs items={[{ name: 'Work', path: '/work' }, { name: 'RYNEKA', path: '/ryneka' }]} />
       <PageHero
         title="RYNEKA"
         gradientWords={['RYNEKA']}

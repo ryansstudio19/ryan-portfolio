@@ -9,6 +9,7 @@ import '@fontsource/rajdhani/500.css';
 import '@fontsource/rajdhani/600.css';
 import '@fontsource/rajdhani/700.css';
 import './globals.css';
+import { SITE_URL } from '@/lib/seo';
 import Background from '@/components/Background';
 import Cursor from '@/components/Cursor';
 import Footer from '@/components/Footer';
@@ -17,13 +18,27 @@ import Providers from '@/components/Providers';
 import { ScrollProgress } from '@/components/motion';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ryanzannah.online'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Ryan Zannah | Software Engineer & Digital Builder',
     template: '%s | Ryan Zannah',
   },
   description:
-    'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh, with 5+ years of experience in design, web development and SEO. Founder of QORVAYN.',
+    'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh with 5+ years in web development, design and SEO. Founder of QORVAYN.',
+  applicationName: 'Ryan Zannah',
+  authors: [{ name: 'Ryan Zannah', url: SITE_URL }],
+  creator: 'Ryan Zannah',
+  publisher: 'Ryan Zannah',
+  category: 'technology',
+  formatDetection: { telephone: false, email: false, address: false },
+  openGraph: {
+    type: 'website',
+    siteName: 'Ryan Zannah',
+    locale: 'en_US',
+    url: SITE_URL,
+    images: [{ url: '/og/home.png', width: 1200, height: 630, alt: 'Ryan Zannah, software engineer and digital builder' }],
+  },
+  twitter: { card: 'summary_large_image', creator: '@ryan_zannah', images: ['/og/home.png'] },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

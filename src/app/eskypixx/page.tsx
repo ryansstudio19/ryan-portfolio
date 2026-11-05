@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/StructuredData';
 import Link from 'next/link';
 import { Arrow, Camera, Cube, Lock, Sparkle, Trophy, Users } from '@/components/Icons';
 import { Magnetic, Marquee, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
 import PageHero from '@/components/PageHero';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'eSkypixx',
-  description:
-    'eSkypixx is an AI-powered visual and social platform for nature, sky and photography, in development at QORVAYN by Ryan Zannah.',
-};
+  path: '/eskypixx',
+  og: 'eskypixx',
+  description: 'eSkypixx is an AI-powered visual and social platform for nature, sky and photography, in development at QORVAYN by Ryan Zannah.',
+});
 
 const features = [
   { icon: Sparkle, name: 'AI curation', text: 'AI that helps moderate, organise and surface the best uploads.' },
@@ -30,6 +33,7 @@ const gallery = [
 export default function ESkypixx() {
   return (
     <>
+      <Breadcrumbs items={[{ name: 'Work', path: '/work' }, { name: 'eSkypixx', path: '/eskypixx' }]} />
       <PageHero
         title="eSkypixx"
         gradientWords={['eSkypixx']}

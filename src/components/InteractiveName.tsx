@@ -91,7 +91,8 @@ export default function InteractiveName({ className = 'hero-name' }: { className
 
   let n = 0;
   return (
-    <h1 className={className} aria-label="Ryan Zannah" onTouchStart={fromTouch} onTouchMove={fromTouch}>
+    <h1 className={className} onTouchStart={fromTouch} onTouchMove={fromTouch}>
+      <span className="sr-only">Ryan Zannah</span>
       {LINES.map((line, li) => {
         const chars = line.split('');
         return (

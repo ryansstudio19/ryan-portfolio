@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/StructuredData';
 import Link from 'next/link';
 import { Arrow, Brand } from '@/components/Icons';
 import { Magnetic, Reveal } from '@/components/motion';
@@ -6,14 +8,17 @@ import PageHero from '@/components/PageHero';
 import QorvaynOrb from '@/components/home/QorvaynOrb';
 import { qorvayn } from '@/data/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Coming soon',
-  description: 'More QORVAYN products are in development. Follow Ryan Zannah and QORVAYN for what comes next.',
-};
+  path: '/coming-soon',
+  og: 'qorvayn',
+  description: 'More QORVAYN products are in development. Follow QORVAYN on its official channels for launches and news.',
+});
 
 export default function ComingSoon() {
   return (
     <>
+      <Breadcrumbs items={[{ name: 'Coming soon', path: '/coming-soon' }]} />
       <PageHero
         title="Something new is in the works"
         gradientWords={['new']}

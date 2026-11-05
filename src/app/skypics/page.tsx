@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import Redirect from '@/components/Redirect';
 
 // SkyPics was renamed to eSkypixx. Vercel redirects /skypics permanently; this page covers any other host.
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'SkyPics is now eSkypixx',
-  robots: { index: false, follow: true },
-  alternates: { canonical: '/eskypixx' },
-};
+  path: '/eskypixx',
+  og: 'eskypixx',
+  noindex: true,
+  description: 'SkyPics has been renamed to eSkypixx.',
+});
 
 export default function SkyPics() {
   return (

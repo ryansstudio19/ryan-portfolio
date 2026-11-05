@@ -187,13 +187,13 @@ export const experience = [
   {
     role: 'Freelancer',
     org: 'Independent',
-    when: '5+ years',
+    when: '2021 – now',
     text: 'Graphic design, web design and development, and content work for clients alongside school.',
   },
 ];
 
 export const timeline = [
-  { year: 'Early years', title: 'Freelancing begins', text: 'Took on my first design and digital projects for clients, the start of more than five years of hands-on work.' },
+  { year: '2021', title: 'Freelancing begins', text: 'Took on my first design and digital projects for clients, the start of more than five years of hands-on work.' },
   { year: '2022', title: 'Started coding', text: 'Wrote my first lines of Python and found the thing I wanted to keep doing: solving problems with software.' },
   { year: 'Age 13', title: 'Graphic designer at X-Brain Info Tech', text: 'Worked as a graphic designer at X-Brain Info Tech, a design agency in Kushtia, while still a student.' },
   { year: '2024', title: 'The eSkypixx idea', text: 'Sketched a platform dedicated to sky and nature photography, blending technology with the beauty of the natural world.' },

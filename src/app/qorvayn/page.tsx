@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { QorvaynSchema } from '@/components/StructuredData';
 import Link from 'next/link';
 import QorvaynOrb from '@/components/home/QorvaynOrb';
 import { Arrow, Brand, Mail } from '@/components/Icons';
@@ -7,15 +9,17 @@ import PageHero from '@/components/PageHero';
 import WorkGrid from '@/components/WorkGrid';
 import { photos, qorvayn } from '@/data/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'QORVAYN',
-  description:
-    'QORVAYN is a technology company founded on 10 March 2026 in Bangladesh by Ryan Zannah, building intelligent, human-centered digital products: eSkypixx, RYNEKA and GoalWear.',
-};
+  path: '/qorvayn',
+  og: 'qorvayn',
+  description: 'QORVAYN is a technology company from Bangladesh, founded in March 2026, building intelligent, human-centered products: eSkypixx, RYNEKA and GoalWear.',
+});
 
 export default function Qorvayn() {
   return (
     <>
+      <QorvaynSchema />
       <PageHero
         title="QORVAYN"
         gradientWords={['QORVAYN']}

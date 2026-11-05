@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/StructuredData';
 import Link from 'next/link';
 import { ArrowUpRight, Bag, Ball, Bolt, Gem, Layers, Shirt } from '@/components/Icons';
 import { Magnetic, Marquee, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
 import PageHero from '@/components/PageHero';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'GoalWear',
-  description:
-    'GoalWear is a football jersey and streetwear e-commerce brand from QORVAYN: matchday player-edition drops, classic club kits and street culture.',
-};
+  path: '/goalwear',
+  og: 'goalwear',
+  description: 'GoalWear is a football jersey and streetwear brand: matchday player-edition drops, classic club kits and street culture. Built for matchday. Worn everywhere.',
+});
 
 const range = [
   { icon: Shirt, name: 'Player-edition drops', text: 'Matchday jerseys cut the way players wear them.' },
@@ -25,6 +28,7 @@ const experience = [
 export default function GoalWear() {
   return (
     <>
+      <Breadcrumbs items={[{ name: 'Work', path: '/work' }, { name: 'GoalWear', path: '/goalwear' }]} />
       <PageHero
         title="GoalWear"
         gradientWords={['GoalWear']}

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
+import { AboutSchema } from '@/components/StructuredData';
 import Link from 'next/link';
 import { Arrow, Ball, Brain, Camera, Code, Globe, Telescope } from '@/components/Icons';
 import Age from '@/components/Age';
@@ -10,16 +12,20 @@ import SkillGroups from '@/components/SkillGroups';
 import Timeline from '@/components/Timeline';
 import { experience, interests, photos } from '@/data/site';
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'The story of Ryan Zannah: software engineer and digital builder from Dhaka with 5+ years of experience, and the person behind QORVAYN.',
-};
+export const metadata: Metadata = pageMeta({
+  title: 'About Ryan Zannah | Software Engineer from Dhaka',
+  absoluteTitle: true,
+  path: '/about',
+  og: 'about',
+  description: 'Meet Ryan Zannah, a software engineer from Dhaka, Bangladesh: his story, 5+ years of freelance and agency work, his skills and the languages he speaks.',
+});
 
 const interestIcons = [Camera, Code, Brain, Globe, Ball, Telescope];
 
 export default function About() {
   return (
     <>
+      <AboutSchema />
       <PageHero
         title="The person behind the work"
         gradientWords={['work']}
