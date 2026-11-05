@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Age from '@/components/Age';
 import ContactSection from '@/components/ContactSection';
 import HomeHero from '@/components/home/HomeHero';
 import PhotoStrip from '@/components/home/PhotoStrip';
@@ -25,12 +26,15 @@ export default function Home() {
             <WordReveal text="I turn ideas into products people can actually use." className="h2" gradientWords={['products']} />
             <Reveal delay={0.1}>
               <p className="lead" style={{ marginTop: '1.4rem' }}>
-                I wrote my first Python in 2022. Today I lead QORVAYN, design and develop its products, and handle the
-                SEO, content and design work that helps them reach people.
+                I started freelancing more than five years ago, and at 13 I was a graphic designer at an agency in Kushtia.
+                Today I lead QORVAYN, design and develop its products, and handle the SEO, content and design work that
+                helps them reach people.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <dl className="facts">
+                <div className="fact"><dt>Experience</dt><dd>5+ years</dd></div>
+                <div className="fact"><dt>Age</dt><dd><Age /></dd></div>
                 <div className="fact"><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
                 <div className="fact"><dt>Leading</dt><dd>QORVAYN</dd></div>
                 <div className="fact"><dt>Focus</dt><dd>Full-stack, design, SEO</dd></div>

@@ -73,8 +73,8 @@ export default function HomeHero() {
               <small>10 March 2026</small>
             </motion.div>
             <motion.div className="hero-tag t2" {...fade(1.35)}>
-              Dhaka, Bangladesh
-              <small>Remote-first, working worldwide</small>
+              5+ years of experience
+              <small>Freelance, agency &amp; founder</small>
             </motion.div>
           </motion.div>
         </div>

@@ -6,6 +6,9 @@ export const person = {
   role: 'Founder & CEO, QORVAYN',
   title: 'Software engineer & digital builder',
   location: 'Dhaka, Bangladesh',
+  // used only to calculate the age shown on the site; the date itself is never displayed
+  birthDate: '2010-03-19',
+  experience: '5+ years',
   email: 'ryansstudio19@gmail.com',
   phone: '+880 1983-905724',
   phoneHref: 'tel:+8801983905724',
@@ -171,10 +174,33 @@ export const languages: Language[] = [
   { name: 'Korean', level: 'Elementary' },
 ];
 
+export const experience = [
+  {
+    role: 'Founder & CEO',
+    org: 'QORVAYN',
+    when: 'Mar 2026 – now',
+    text: 'Founded the technology company behind eSkypixx, RYNEKA and GoalWear. I lead product, design and development.',
+  },
+  {
+    role: 'Graphic designer',
+    org: 'X-Brain Info Tech, Kushtia',
+    when: 'At age 13',
+    text: 'Designed graphics for clients at a local design agency while still a student. The agency has since closed.',
+  },
+  {
+    role: 'Freelancer',
+    org: 'Independent',
+    when: '5+ years',
+    text: 'Graphic design, web design and development, and content work for clients alongside school.',
+  },
+];
+
 export const timeline = [
+  { year: 'Early years', title: 'Freelancing begins', text: 'Took on my first design and digital projects for clients, the start of more than five years of hands-on work.' },
   { year: '2022', title: 'Started coding', text: 'Wrote my first lines of Python and found the thing I wanted to keep doing: solving problems with software.' },
+  { year: 'Age 13', title: 'Graphic designer at X-Brain Info Tech', text: 'Worked as a graphic designer at X-Brain Info Tech, a design agency in Kushtia, while still a student.' },
   { year: '2024', title: 'The eSkypixx idea', text: 'Sketched a platform dedicated to sky and nature photography, blending technology with the beauty of the natural world.' },
-  { year: '2025', title: 'Preparing for Germany', text: 'Started learning German, with C1 fluency as the long-term goal and a path toward study and work in Germany.' },
+  { year: '2025', title: 'Preparing for Germany', text: 'Started learning German as the first step toward studying and working in Germany.' },
   { year: 'Mar 2026', title: 'Founded QORVAYN', text: 'On 10 March 2026 I founded QORVAYN with co-founders Adelia Maharani and Siyami Muntaha Saba, the parent company for eSkypixx, RYNEKA and GoalWear.' },
   { year: '2026', title: 'Building full time', text: 'Completed my SSC examinations and moved fully into building QORVAYN products while sharpening my engineering skills.' },
   { year: '2027', title: 'Pearson Edexcel IAL A-Levels', text: 'Planned: Mathematics, Physics and Computer Science as a private candidate, building toward AS and A2 certification.' },

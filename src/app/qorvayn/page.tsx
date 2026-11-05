@@ -48,23 +48,6 @@ export default function Qorvayn() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <Reveal><p className="kicker">// values</p></Reveal>
-            <WordReveal text="What we hold ourselves to" className="h2" gradientWords={['hold']} />
-          </div>
-          <Stagger className="values">
-            {qorvayn.values.map((v) => (
-              <StaggerItem key={v.name} className="value">
-                <h3 className="h3">{v.name}</h3>
-                <p>{v.text}</p>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
             <Reveal><p className="kicker">// ecosystem</p></Reveal>
             <WordReveal text="One company, several directions" className="h2" gradientWords={['directions']} />
             <Reveal delay={0.1}>
@@ -82,7 +65,6 @@ export default function Qorvayn() {
             <WordReveal text="How it started" className="h2" />
             <Reveal delay={0.1} className="prose" style={{ marginTop: '1.4rem' }}>
               {qorvayn.story.map((p) => <p key={p}>{p}</p>)}
-              <p>{qorvayn.operations}</p>
             </Reveal>
           </div>
           <div>

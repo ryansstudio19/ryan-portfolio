@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Arrow, Ball, Brain, Camera, Code, Globe, Telescope } from '@/components/Icons';
+import Age from '@/components/Age';
 import Img from '@/components/Img';
 import LanguageList from '@/components/LanguageList';
 import { Magnetic, Parallax, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
 import PageHero from '@/components/PageHero';
 import SkillGroups from '@/components/SkillGroups';
 import Timeline from '@/components/Timeline';
-import { interests, photos } from '@/data/site';
+import { experience, interests, photos } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -31,8 +32,9 @@ export default function About() {
         }
       >
         <p className="lead">
-          I&apos;m Ryan, a software engineer and digital builder from Dhaka, Bangladesh, and the founder and CEO of QORVAYN.
-          I care about one thing above the rest: technology that solves real problems for real people.
+          I&apos;m Ryan, <Age /> years old, a software engineer and digital builder from Dhaka, Bangladesh, and the founder
+          and CEO of QORVAYN. I have more than five years of experience in design and digital work, and I care about one
+          thing above the rest: technology that solves real problems for real people.
         </p>
       </PageHero>
 
@@ -55,12 +57,13 @@ export default function About() {
             <WordReveal text="Building from Dhaka for anywhere" className="h2" gradientWords={['anywhere']} />
             <Reveal delay={0.1} className="prose" style={{ marginTop: '1.5rem' }}>
               <p>
-                I was born in Dhaka in 2010. My way into technology started with one realisation: I could build digital
+                I&apos;m <Age />, from Dhaka. My way into technology started with one realisation: I could build digital
                 things from my bedroom for people anywhere in the world.
               </p>
               <p>
-                I started with <strong>Python</strong> and moved into web development, and I&apos;ve spent the years since
-                connecting clean code with digital strategy. I like taking complicated problems apart and turning them
+                I started out freelancing, and at 13 I was working as a graphic designer at <strong>X-Brain Info Tech</strong>,
+                an agency in Kushtia, while still in school. Along the way I picked up <strong>Python</strong> and web
+                development, and I&apos;ve spent the years since connecting clean code with design and digital strategy. I like taking complicated problems apart and turning them
                 into useful, user-centred products.
               </p>
               <p>
@@ -72,8 +75,8 @@ export default function About() {
                 patience, timing and resilience, and I bring the same energy to every project.
               </p>
               <p>
-                Next, I&apos;m preparing for a move to <strong>Germany</strong>, learning German toward C1 while I keep
-                building and growing.
+                Next, I&apos;m preparing for a move to <strong>Germany</strong>, learning German while I keep building and
+                growing.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -83,6 +86,32 @@ export default function About() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// experience</p></Reveal>
+            <WordReveal text="Five years and counting" className="h2" gradientWords={['counting']} />
+            <Reveal delay={0.1}>
+              <p className="lead">Freelancing, agency work as a teenager, and now leading my own company.</p>
+            </Reveal>
+          </div>
+          <Stagger className="exp-list">
+            {experience.map((e) => (
+              <StaggerItem key={e.org}>
+                <TiltCard className="exp panel" max={4}>
+                  <div>
+                    <p className="t-year">{e.when}</p>
+                    <h3 className="h3" style={{ marginTop: '0.35rem' }}>{e.role}</h3>
+                    <p className="exp-org">{e.org}</p>
+                  </div>
+                  <p className="exp-text">{e.text}</p>
+                </TiltCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </section>
 
