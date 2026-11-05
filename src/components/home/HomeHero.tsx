@@ -46,14 +46,14 @@ export default function HomeHero() {
       <motion.div className="container hero-inner" style={{ y, opacity, scale, filter: blur }}>
         <motion.p className="hero-hello" {...fade(0.05)}>Hi, I&apos;m</motion.p>
         <InteractiveName />
-        <motion.p className="hero-role" {...fade(0.75)}>
+        <motion.p className="hero-role" {...fade(0.3)}>
           SOFTWARE ENGINEER &amp; DIGITAL BUILDER
         </motion.p>
-        <motion.p className="hero-sub" {...fade(0.9)}>
+        <motion.p className="hero-sub" {...fade(0.4)}>
           I design and build digital products, from the first sketch to launch, and lead <strong>QORVAYN</strong>, the
           technology company behind <strong>eSkypixx</strong>, <strong>RYNEKA</strong> and <strong>GoalWear</strong>.
         </motion.p>
-        <motion.div className="hero-actions" {...fade(1.05)}>
+        <motion.div className="hero-actions" {...fade(0.5)}>
           <Magnetic>
             <Link href="/work" className="btn btn-primary">
               See my work <Arrow />

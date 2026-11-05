@@ -269,7 +269,8 @@ export function Marquee({ items, baseVelocity = -2.2, tilted = false }: { items:
   );
 
   return (
-    <div className={`marquee${tilted ? ' tilted' : ''}`} aria-label={items.join(', ')}>
+    <div className={`marquee${tilted ? ' tilted' : ''}`}>
+      <p className="sr-only">{items.join(', ')}</p>
       <motion.div className="marquee-track" style={{ x }} aria-hidden="true">
         {row('a')}
         {row('b')}

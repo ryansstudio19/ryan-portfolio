@@ -44,7 +44,7 @@ export default function PageHero({
             <motion.div
               initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)', transitionEnd: { filter: 'none' } }}
-              transition={{ delay: 0.55, duration: 0.8, ease: EASE }}
+              transition={{ delay: 0.2, duration: 0.7, ease: EASE }}
             >
               {children}
             </motion.div>

@@ -45,8 +45,9 @@ export default function Nav() {
       >
         <div className="nav-bar">
           <Magnetic strength={0.25}>
-            <Link href="/" className="nav-logo" aria-label="Ryan Zannah, home">
+            <Link href="/" className="nav-logo">
               RZ<span>.</span>
+              <span className="sr-only"> Ryan Zannah, home</span>
             </Link>
           </Magnetic>
           <nav aria-label="Main">
