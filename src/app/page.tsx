@@ -1,16 +1,11 @@
 import Link from 'next/link';
 import Age from '@/components/Age';
-import ContactSection from '@/components/ContactSection';
 import HomeHero from '@/components/home/HomeHero';
-import PhotoStrip from '@/components/home/PhotoStrip';
+import ProductRows from '@/components/home/ProductRows';
 import QorvaynOrb from '@/components/home/QorvaynOrb';
 import { Arrow } from '@/components/Icons';
-import Img from '@/components/Img';
-import LanguageList from '@/components/LanguageList';
-import { Magnetic, Marquee, Parallax, Reveal, WordReveal } from '@/components/motion';
-import SkillGroups from '@/components/SkillGroups';
-import WorkGrid from '@/components/WorkGrid';
-import { marqueeSkills, photos, qorvayn } from '@/data/site';
+import { Magnetic, Marquee, Reveal, WordReveal } from '@/components/motion';
+import { marqueeSkills, qorvayn } from '@/data/site';
 
 export default function Home() {
   return (
@@ -18,17 +13,18 @@ export default function Home() {
       <HomeHero />
       <Marquee items={marqueeSkills} tilted />
 
-      {/* About preview */}
-      <section className="section" id="about">
-        <div className="container intro-grid">
+      {/* Intro */}
+      <section className="section">
+        <div className="container split center">
           <div>
             <Reveal><p className="kicker">// about me</p></Reveal>
             <WordReveal text="I turn ideas into products people can actually use." className="h2" gradientWords={['products']} />
+          </div>
+          <div>
             <Reveal delay={0.1}>
-              <p className="lead" style={{ marginTop: '1.4rem' }}>
+              <p className="lead">
                 I started freelancing more than five years ago, and at 13 I was a graphic designer at an agency in Kushtia.
-                Today I lead QORVAYN, design and develop its products, and handle the SEO, content and design work that
-                helps them reach people.
+                Today I design, build and grow digital products, from the code to the SEO that helps people find them.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -36,9 +32,7 @@ export default function Home() {
                 <div className="fact"><dt>Experience</dt><dd>5+ years</dd></div>
                 <div className="fact"><dt>Age</dt><dd><Age /></dd></div>
                 <div className="fact"><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
-                <div className="fact"><dt>Leading</dt><dd>QORVAYN</dd></div>
-                <div className="fact"><dt>Focus</dt><dd>Full-stack, design, SEO</dd></div>
-                <div className="fact"><dt>Languages</dt><dd>English, Hindi + 8 more</dd></div>
+                <div className="fact"><dt>Focus</dt><dd>Web, design, SEO</dd></div>
               </dl>
             </Reveal>
             <Reveal delay={0.2}>
@@ -49,103 +43,59 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
-          <div className="collage">
-            <Parallax offset={40} className="photo c1">
-              <Reveal from="left" style={{ position: 'absolute', inset: 0 }}>
-                <Img src={photos.rooftop.src} alt={photos.rooftop.alt} sizes="(max-width: 900px) 60vw, 28vw" />
-              </Reveal>
-            </Parallax>
-            <Parallax offset={-50} className="photo c2">
-              <Reveal from="right" delay={0.1} style={{ position: 'absolute', inset: 0 }}>
-                <Img src={photos.sky.src} alt={photos.sky.alt} sizes="(max-width: 900px) 55vw, 24vw" />
-              </Reveal>
-            </Parallax>
-          </div>
         </div>
       </section>
 
-      {/* QORVAYN */}
-      <section className="section" id="qorvayn">
-        <div className="container q-grid">
+      {/* Products */}
+      <section className="section">
+        <div className="container">
+          <div className="section-head" style={{ maxWidth: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1.5rem' }}>
+            <div style={{ display: 'grid', gap: '1rem' }}>
+              <Reveal><p className="kicker">// what I&apos;m building</p></Reveal>
+              <WordReveal text="Selected work" className="h2" gradientWords={['work']} />
+            </div>
+            <Reveal delay={0.1}>
+              <Magnetic><Link href="/work" className="btn btn-ghost btn-small">All work <Arrow /></Link></Magnetic>
+            </Reveal>
+          </div>
+          <ProductRows />
+        </div>
+      </section>
+
+      {/* QORVAYN teaser */}
+      <section className="section">
+        <div className="container q-teaser">
           <Reveal from="scale">
             <QorvaynOrb />
           </Reveal>
           <div>
-            <Reveal><p className="kicker">// the parent company</p></Reveal>
-            <WordReveal text="QORVAYN is where everything I build comes together." className="h2" gradientWords={['QORVAYN']} />
+            <Reveal><p className="kicker">// the company</p></Reveal>
+            <WordReveal text="Everything I build lives under QORVAYN" className="h2" gradientWords={['QORVAYN']} />
             <Reveal delay={0.1}>
               <p className="lead" style={{ marginTop: '1.2rem' }}>{qorvayn.summary}</p>
             </Reveal>
             <Reveal delay={0.15}>
-              <div className="q-meta">
-                <span className="chip">Founded {qorvayn.founded}</span>
-                <span className="chip">{qorvayn.country}</span>
-                <span className="chip">Remote-first</span>
-                <span className="chip">Founder &amp; CEO: Ryan Zannah</span>
+              <div style={{ marginTop: '2rem' }}>
+                <Magnetic><Link href="/qorvayn" className="btn btn-ghost">About QORVAYN <Arrow /></Link></Magnetic>
               </div>
             </Reveal>
-            <div className="mv">
-              <Reveal from="left" delay={0.1} className="panel">
-                <h3 className="h3">Mission</h3>
-                <p>{qorvayn.mission}</p>
-              </Reveal>
-              <Reveal from="right" delay={0.18} className="panel">
-                <h3 className="h3">Vision</h3>
-                <p>{qorvayn.vision}</p>
-              </Reveal>
-            </div>
-            <Reveal delay={0.2}>
-              <Magnetic>
-                <Link href="/qorvayn" className="btn btn-primary">Explore QORVAYN <Arrow /></Link>
-              </Magnetic>
-            </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* Work */}
-      <section className="section" id="work">
-        <div className="container">
-          <div className="section-head">
-            <Reveal><p className="kicker">// selected work</p></Reveal>
-            <WordReveal text="Products in the QORVAYN ecosystem" className="h2" gradientWords={['ecosystem']} />
-          </div>
-          <WorkGrid />
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="section" id="skills">
-        <div className="container">
-          <div className="section-head">
-            <Reveal><p className="kicker">// skills</p></Reveal>
-            <WordReveal text="What I work with" className="h2" />
-            <Reveal delay={0.1}>
-              <p className="lead">Thirty-one skills across four areas, from writing the code to getting it found.</p>
-            </Reveal>
-          </div>
-          <SkillGroups />
         </div>
       </section>
 
       <Marquee items={['Think', 'Design', 'Build', 'Ship', 'Grow', 'Repeat']} baseVelocity={1.8} />
 
-      {/* Languages */}
-      <section className="section" id="languages">
+      {/* Contact prompt */}
+      <section className="cta-band" style={{ borderTop: 0 }}>
         <div className="container">
-          <div className="section-head">
-            <Reveal><p className="kicker">// languages</p></Reveal>
-            <WordReveal text="Ten languages, and counting" className="h2" gradientWords={['counting']} />
-            <Reveal delay={0.1}>
-              <p className="lead">Professional working proficiency in English and Hindi, and elementary in eight more.</p>
-            </Reveal>
-          </div>
-          <LanguageList />
+          <WordReveal text="Let's work together" className="h2" gradientWords={['together']} />
+          <Reveal delay={0.1}><p className="lead">Projects, collaborations or a quick question. I&apos;d like to hear about it.</p></Reveal>
+          <Reveal delay={0.15} className="actions">
+            <Magnetic><Link href="/contact" className="btn btn-primary">Get in touch <Arrow /></Link></Magnetic>
+            <Magnetic><Link href="/about" className="btn btn-ghost">About me</Link></Magnetic>
+          </Reveal>
         </div>
       </section>
-
-      <PhotoStrip />
-      <ContactSection />
     </>
   );
 }

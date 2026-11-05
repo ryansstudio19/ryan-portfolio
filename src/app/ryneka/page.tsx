@@ -130,7 +130,7 @@ export default function Ryneka() {
           <WordReveal text="Planning before building" className="h2" gradientWords={['building']} />
           <Reveal delay={0.1}><p className="lead">RYNEKA is in the concept and planning phase. Follow along as it takes shape.</p></Reveal>
           <Reveal delay={0.15} className="actions">
-            <Magnetic><Link href="/#contact" className="btn btn-primary">Follow the build <Arrow /></Link></Magnetic>
+            <Magnetic><Link href="/contact" className="btn btn-primary">Follow the build <Arrow /></Link></Magnetic>
             <Magnetic><Link href="/qorvayn" className="btn btn-ghost">About QORVAYN</Link></Magnetic>
           </Reveal>
         </div>

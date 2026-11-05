@@ -19,11 +19,11 @@ import { ScrollProgress } from '@/components/motion';
 export const metadata: Metadata = {
   metadataBase: new URL('https://ryanzannah.online'),
   title: {
-    default: 'Ryan Zannah | Founder & CEO of QORVAYN',
+    default: 'Ryan Zannah | Software Engineer & Digital Builder',
     template: '%s | Ryan Zannah',
   },
   description:
-    'Ryan Zannah is a software engineer and the founder and CEO of QORVAYN, the technology company behind eSkypixx, RYNEKA and GoalWear.',
+    'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh, with 5+ years of experience in design, web development and SEO. Founder of QORVAYN.',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

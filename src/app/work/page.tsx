@@ -1,0 +1,76 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Arrow, Code, Layers, Sparkle, Bag, Globe, Camera } from '@/components/Icons';
+import { Magnetic, Reveal, Stagger, StaggerItem, TiltCard, WordReveal } from '@/components/motion';
+import PageHero from '@/components/PageHero';
+import WorkGrid from '@/components/WorkGrid';
+
+export const metadata: Metadata = {
+  title: 'Work',
+  description: 'Products and services by Ryan Zannah: eSkypixx, RYNEKA and GoalWear, plus web development, design and SEO work.',
+};
+
+const services = [
+  { icon: Code, name: 'Web development', text: 'Full-stack websites and web apps, built fast, responsive and easy to maintain.' },
+  { icon: Layers, name: 'Web & UI design', text: 'Interfaces that look sharp and make the next step obvious.' },
+  { icon: Sparkle, name: 'Branding & logos', text: 'Logos, banners and visual identities that hold together across every touchpoint.' },
+  { icon: Globe, name: 'SEO', text: 'Audits, on-page and off-page SEO, and copy written to rank and to convert.' },
+  { icon: Bag, name: 'E-commerce', text: 'Storefronts and e-commerce SEO that help products get found and bought.' },
+  { icon: Camera, name: 'Content & video', text: 'Social content, image editing and video editing for brands and launches.' },
+];
+
+export default function Work() {
+  return (
+    <>
+      <PageHero title="Work" gradientWords={['Work']}>
+        <p className="lead">
+          The products I&apos;m building inside QORVAYN, and the kind of work I take on for clients.
+        </p>
+      </PageHero>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// products</p></Reveal>
+            <WordReveal text="Products in the QORVAYN ecosystem" className="h2" gradientWords={['ecosystem']} />
+          </div>
+          <WorkGrid />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <Reveal><p className="kicker">// services</p></Reveal>
+            <WordReveal text="What I can do for you" className="h2" gradientWords={['you']} />
+            <Reveal delay={0.1}>
+              <p className="lead">Five years of freelance and agency work across design, development and growth.</p>
+            </Reveal>
+          </div>
+          <Stagger className="feature-grid">
+            {services.map((f) => (
+              <StaggerItem key={f.name}>
+                <TiltCard className="feature panel" max={8} style={{ height: '100%' }}>
+                  <span className="feature-ico"><f.icon /></span>
+                  <h3 className="h3">{f.name}</h3>
+                  <p>{f.text}</p>
+                </TiltCard>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="container">
+          <WordReveal text="Have a project in mind?" className="h2" gradientWords={['project']} />
+          <Reveal delay={0.1}><p className="lead">Tell me what you&apos;re building and where I can help.</p></Reveal>
+          <Reveal delay={0.15} className="actions">
+            <Magnetic><Link href="/contact" className="btn btn-primary">Get in touch <Arrow /></Link></Magnetic>
+            <Magnetic><Link href="/about" className="btn btn-ghost">About me</Link></Magnetic>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -33,7 +33,7 @@ export default function Nav() {
     return () => window.removeEventListener('keydown', esc);
   }, [open, lenis]);
 
-  const isActive = (href: string) => (href.startsWith('/#') ? false : pathname === href);
+  const isActive = (href: string) => pathname === href;
   const pill = hovered ?? nav.find((n) => isActive(n.href))?.href ?? null;
 
   return (
@@ -69,7 +69,7 @@ export default function Nav() {
               ))}
               <li style={{ marginLeft: '0.4rem' }}>
                 <Magnetic>
-                  <Link href="/#contact" className="btn btn-primary btn-small">Contact</Link>
+                  <Link href="/contact" className="btn btn-primary btn-small">Contact</Link>
                 </Magnetic>
               </li>
             </ul>
@@ -97,7 +97,7 @@ export default function Nav() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <nav aria-label="Mobile">
-              {[{ label: 'Home', href: '/' }, ...nav, { label: 'Contact', href: '/#contact' }].map((n, i) => (
+              {[{ label: 'Home', href: '/' }, ...nav, { label: 'Contact', href: '/contact' }].map((n, i) => (
                 <motion.div
                   key={n.href}
                   initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}

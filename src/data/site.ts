@@ -3,7 +3,6 @@
 
 export const person = {
   name: 'Ryan Zannah',
-  role: 'Founder & CEO, QORVAYN',
   title: 'Software engineer & digital builder',
   location: 'Dhaka, Bangladesh',
   // used only to calculate the age shown on the site; the date itself is never displayed
@@ -159,11 +158,10 @@ export const marqueeSkills = [
   'Video editing',
 ];
 
-export type Language = { name: string; level: 'Professional working' | 'Elementary'; note?: string };
+export type Language = { name: string; level: 'Native' | 'Elementary'; note?: string };
 
 export const languages: Language[] = [
-  { name: 'English', level: 'Professional working', note: 'Duolingo English Test 130, Mar 2026' },
-  { name: 'Hindi', level: 'Professional working' },
+  { name: 'English', level: 'Native', note: 'Duolingo English Test 130, Mar 2026' },
   { name: 'German', level: 'Elementary', note: 'Duolingo score 13, Sep 2026' },
   { name: 'French', level: 'Elementary' },
   { name: 'Spanish', level: 'Elementary' },
@@ -172,6 +170,7 @@ export const languages: Language[] = [
   { name: 'Indonesian', level: 'Elementary' },
   { name: 'Japanese', level: 'Elementary' },
   { name: 'Korean', level: 'Elementary' },
+  { name: 'Arabic', level: 'Elementary' },
 ];
 
 export const experience = [
@@ -218,6 +217,6 @@ export const interests = [
 
 export const nav = [
   { label: 'About', href: '/about' },
+  { label: 'Work', href: '/work' },
   { label: 'QORVAYN', href: '/qorvayn' },
-  { label: 'Work', href: '/#work' },
 ];

@@ -32,8 +32,8 @@ export default function ComingSoon() {
           ))}
         </div>
         <div className="hero-actions">
-          <Magnetic><Link href="/#work" className="btn btn-primary">See current products <Arrow /></Link></Magnetic>
-          <Magnetic><Link href="/#contact" className="btn btn-ghost">Get in touch</Link></Magnetic>
+          <Magnetic><Link href="/work" className="btn btn-primary">See current products <Arrow /></Link></Magnetic>
+          <Magnetic><Link href="/contact" className="btn btn-ghost">Get in touch</Link></Magnetic>
         </div>
       </PageHero>
       <Reveal>

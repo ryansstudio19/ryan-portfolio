@@ -111,7 +111,7 @@ export default function ESkypixx() {
           <WordReveal text="Interested in eSkypixx?" className="h2" gradientWords={['eSkypixx?']} />
           <Reveal delay={0.1}><p className="lead">Follow the build, or get in touch to collaborate.</p></Reveal>
           <Reveal delay={0.15} className="actions">
-            <Magnetic><Link href="/#contact" className="btn btn-primary">Get in touch <Arrow /></Link></Magnetic>
+            <Magnetic><Link href="/contact" className="btn btn-primary">Get in touch <Arrow /></Link></Magnetic>
             <Magnetic><Link href="/qorvayn" className="btn btn-ghost">About QORVAYN</Link></Magnetic>
           </Reveal>
         </div>

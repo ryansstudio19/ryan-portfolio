@@ -24,7 +24,6 @@ export default function Qorvayn() {
       >
         <p className="lead">{qorvayn.summary}</p>
         <div className="q-meta">
-          <span className="chip">Founder &amp; CEO: Ryan Zannah</span>
           <span className="chip">{qorvayn.country}</span>
           <span className="chip">Remote-first</span>
         </div>
@@ -102,7 +101,7 @@ export default function Qorvayn() {
             <Magnetic>
               <a href={`mailto:${qorvayn.email}`} className="btn btn-primary"><Mail /> {qorvayn.email}</a>
             </Magnetic>
-            <Magnetic><Link href="/#contact" className="btn btn-ghost">Contact Ryan <Arrow /></Link></Magnetic>
+            <Magnetic><Link href="/contact" className="btn btn-ghost">Get in touch <Arrow /></Link></Magnetic>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="chips" style={{ justifyContent: 'center', marginTop: '2rem' }}>
