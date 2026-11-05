@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { nav, person } from '@/data/site';
 import { Magnetic } from './motion';
 import { useLenis } from './Providers';
@@ -16,6 +16,9 @@ export default function Nav() {
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
 
   useMotionValueEvent(scrollY, 'change', (v) => {
     const prev = scrollY.getPrevious() ?? 0;
@@ -25,6 +28,16 @@ export default function Nav() {
   });
 
   useEffect(() => setOpen(false), [pathname]);
+  // Move keyboard focus into the menu when it opens, and back to the button when it closes.
+  useEffect(() => {
+    if (open) {
+      const t = window.setTimeout(() => menuRef.current?.querySelector<HTMLElement>('a')?.focus(), 80);
+      wasOpen.current = true;
+      return () => window.clearTimeout(t);
+    }
+    if (wasOpen.current) { toggleRef.current?.focus(); wasOpen.current = false; }
+  }, [open]);
+
   useEffect(() => {
     if (open) { lenis?.stop(); document.body.style.overflow = 'hidden'; }
     else { lenis?.start(); document.body.style.overflow = ''; }
@@ -76,6 +89,7 @@ export default function Nav() {
             </ul>
           </nav>
           <button
+            ref={toggleRef}
             className="nav-toggle"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
@@ -91,6 +105,10 @@ export default function Nav() {
         {open && (
           <motion.div
             id="mobile-menu"
+            ref={menuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu"
             className="mobile-menu"
             initial={{ opacity: 0, clipPath: 'circle(0% at 92% 4%)' }}
             animate={{ opacity: 1, clipPath: 'circle(150% at 92% 4%)' }}

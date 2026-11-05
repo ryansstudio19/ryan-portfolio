@@ -78,7 +78,7 @@ body::after {
 .skip-link:focus { top: 1rem; }
 
 /* ============ Background ============ */
-.bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 1.2s ease; }
 .bg-aura {
   position: fixed; inset: -20vh 0 auto; height: 90vh; z-index: 0; pointer-events: none;
   background:
@@ -639,3 +639,19 @@ main, footer { position: relative; z-index: 1; }
 @media (max-width: 900px) { .q-teaser { grid-template-columns: 1fr; } .q-teaser .orb { max-width: 280px; } }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ============ Touch targets (audit) ============ */
+.footer-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-social { display: flex; gap: 0.25rem; margin: -10px; }
+.footer-social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; color: var(--muted); transition: color 0.25s, background-color 0.25s; }
+.footer-social a:hover { color: var(--sky); background: rgba(0, 212, 255, 0.08); }
+.footer-social svg { width: 18px; height: 18px; }
+.footer-email { display: inline-flex; align-items: center; min-height: 44px; }
+.nav-logo { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 2px; }
+.back { min-height: 44px; }
+.footer-bottom { align-items: center; }
+
+/* Phones: skip the costly background blur behind glass panels; a denser fill keeps the same look. */
+@media (max-width: 760px) {
+  .panel { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(9, 16, 28, 0.86); }
+}

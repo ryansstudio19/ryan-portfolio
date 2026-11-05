@@ -95,7 +95,7 @@ export default function About() {
         <div className="container">
           <div className="section-head">
             <Reveal><p className="kicker">// experience</p></Reveal>
-            <WordReveal text="Five years and counting" className="h2" gradientWords={['counting']} />
+            <WordReveal text="Experience that started early" className="h2" gradientWords={['early']} />
             <Reveal delay={0.1}>
               <p className="lead">Freelancing, agency work as a teenager, and now leading my own company.</p>
             </Reveal>

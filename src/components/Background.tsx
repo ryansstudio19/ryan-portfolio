@@ -15,11 +15,13 @@ export default function Background() {
 
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const small = window.matchMedia('(max-width: 760px)').matches;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Phones get a lighter canvas: lower resolution and 30fps; it still looks the same at that size.
+    const dpr = Math.min(window.devicePixelRatio || 1, small ? 1.25 : 2);
+    const frameGap = small ? 1000 / 30 : 0;
     let W = 0;
     let H = 0;
     const mouse = { x: -9999, y: -9999 };
-    const COUNT = small ? 45 : 90;
+    const COUNT = small ? 34 : 90;
     const LINK = small ? 100 : 120;
 
     type P = { x: number; y: number; z: number; vx: number; vy: number; r: number; a: number; c: string };
@@ -50,11 +52,28 @@ export default function Background() {
     resize();
     for (let i = 0; i < COUNT; i++) particles.push(spawn(true));
 
+    // Each particle's soft glow is drawn once here and reused, instead of building a gradient every frame.
+    const sprite = (rgb: string) => {
+      const c = document.createElement('canvas');
+      c.width = c.height = 64;
+      const g = c.getContext('2d')!;
+      const grad = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+      grad.addColorStop(0, `rgba(${rgb},0.16)`);
+      grad.addColorStop(1, `rgba(${rgb},0)`);
+      g.fillStyle = grad;
+      g.fillRect(0, 0, 64, 64);
+      return c;
+    };
+    const glow: Record<string, HTMLCanvasElement> = { '0,212,255': sprite('0,212,255'), '124,58,237': sprite('124,58,237') };
+
     let ring = 0;
     let raf = 0;
     let running = true;
+    let last = 0;
 
-    const frame = () => {
+    const frame = (now = 0) => {
+      if (frameGap && now - last < frameGap) { raf = requestAnimationFrame(frame); return; }
+      last = now;
       ctx.clearRect(0, 0, W, H);
 
       // grid
@@ -95,13 +114,7 @@ export default function Background() {
           if (p.y < -10) Object.assign(p, spawn(false));
         }
         const rr = p.r * p.z;
-        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, rr * 3);
-        g.addColorStop(0, `rgba(${p.c},0.16)`);
-        g.addColorStop(1, `rgba(${p.c},0)`);
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, rr * 3, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.drawImage(glow[p.c], p.x - rr * 3, p.y - rr * 3, rr * 6, rr * 6);
         ctx.fillStyle = `rgba(${p.c},${p.a})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, rr, 0, Math.PI * 2);
@@ -130,21 +143,37 @@ export default function Background() {
 
       if (running && !reduce) raf = requestAnimationFrame(frame);
     };
-    frame();
+
+    // Start once the page has finished loading, so the first paint isn't competing with the animation.
+    let started = false;
+    const start = () => {
+      if (started) return;
+      started = true;
+      canvas.style.opacity = '1';
+      frame();
+    };
+    const idle = (cb: () => void) => {
+      if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(cb, { timeout: 1500 });
+      else setTimeout(cb, 600);
+    };
+    const kick = () => idle(start);
+    if (document.readyState === 'complete') kick();
+    else window.addEventListener('load', kick, { once: true });
 
     const onMove = (e: PointerEvent) => { mouse.x = e.clientX; mouse.y = e.clientY; };
     const onVis = () => {
       running = !document.hidden;
       cancelAnimationFrame(raf);
-      if (running && !reduce) raf = requestAnimationFrame(frame);
+      if (running && started && !reduce) raf = requestAnimationFrame(frame);
     };
-    const onResize = () => { resize(); if (reduce) frame(); };
+    const onResize = () => { resize(); if (reduce && started) frame(); };
     window.addEventListener('pointermove', onMove, { passive: true });
     window.addEventListener('resize', onResize);
     document.addEventListener('visibilitychange', onVis);
     return () => {
       running = false;
       cancelAnimationFrame(raf);
+      window.removeEventListener('load', kick);
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('resize', onResize);
       document.removeEventListener('visibilitychange', onVis);

@@ -15,7 +15,9 @@ export default function Providers({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return;
+    const touchOnly = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    // Smooth scrolling only helps mouse wheels; phones keep their own native scrolling.
+    if (reduce || touchOnly) return;
     // Smooth wheel scrolling on desktop; touch keeps native momentum scrolling.
     const instance = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: { offset: -80 } });
     setLenis(instance);
@@ -31,22 +33,35 @@ export default function Providers({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // New page: start at the top, unless the URL targets a section.
+  // Back/forward should restore the previous position, so remember when one happens.
+  const lenisRef = useRef<Lenis | null>(null);
+  lenisRef.current = lenis;
+  const fromHistory = useRef(false);
+  const firstPath = useRef(true);
   useEffect(() => {
+    const onPop = () => { fromHistory.current = true; };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // A link to a new page starts at the top (or at the section its URL names).
+  // The first load and back/forward keep the browser's own scroll position.
+  useEffect(() => {
+    if (firstPath.current) { firstPath.current = false; return; }
+    if (fromHistory.current) { fromHistory.current = false; return; }
+    const l = lenisRef.current;
     const hash = window.location.hash;
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        const t = window.setTimeout(() => {
-          if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -80, immediate: true });
-          else (el as HTMLElement).scrollIntoView();
-        }, 60);
-        return () => window.clearTimeout(t);
-      }
+    const el = hash ? document.querySelector<HTMLElement>(hash) : null;
+    if (el) {
+      const t = window.setTimeout(() => {
+        if (l) l.scrollTo(el, { offset: -80, immediate: true });
+        else el.scrollIntoView();
+      }, 60);
+      return () => window.clearTimeout(t);
     }
-    if (lenis) lenis.scrollTo(0, { immediate: true });
+    if (l) l.scrollTo(0, { immediate: true });
     else window.scrollTo(0, 0);
-  }, [pathname, lenis]);
+  }, [pathname]);
 
   return (
     <LenisContext.Provider value={lenis}>
