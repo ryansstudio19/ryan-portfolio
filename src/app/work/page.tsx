@@ -40,6 +40,16 @@ export default function Work() {
             <WordReveal text="Products in the QORVAYN ecosystem" className="h2" gradientWords={['ecosystem']} />
           </div>
           <WorkGrid />
+          <Reveal from="up" amount={0.4}>
+            <Link href="/articles/rebuilding-my-portfolio-nextjs-seo" className="future-card panel case-link" data-cursor="READ">
+              <div>
+                <p className="kicker">// case study</p>
+                <h3 className="h3" style={{ marginTop: '0.4rem' }}>How I rebuilt this portfolio with Next.js, Framer Motion and SEO in mind</h3>
+                <p className="muted" style={{ marginTop: '0.35rem' }}>Mobile performance from 60&ndash;77 to 89&ndash;94, and 100 for SEO and accessibility on every page.</p>
+              </div>
+              <span className="btn btn-ghost btn-small">Read the case study <Arrow /></span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 

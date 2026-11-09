@@ -139,3 +139,35 @@ export function ServicesSchema({
     />
   );
 }
+
+/** An article written by Ryan. */
+export function ArticleSchema({ a }: { a: { slug: string; title: string; description: string; date: string; tags: string[] } }) {
+  const url = `${SITE_URL}/articles/${a.slug}`;
+  return (
+    <Script
+      data={{
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'BlogPosting',
+            '@id': `${url}#article`,
+            headline: a.title,
+            description: a.description,
+            url,
+            mainEntityOfPage: url,
+            datePublished: a.date,
+            dateModified: a.date,
+            inLanguage: 'en',
+            keywords: a.tags.join(', '),
+            image: `${SITE_URL}/og/articles/${a.slug}.png`,
+            author: { '@id': PERSON_ID },
+            publisher: { '@id': PERSON_ID },
+            isPartOf: { '@id': WEBSITE_ID },
+          },
+          personNode,
+          crumbs([{ name: 'Articles', path: '/articles' }, { name: a.title, path: `/articles/${a.slug}` }]),
+        ],
+      }}
+    />
+  );
+}

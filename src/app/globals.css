@@ -691,3 +691,28 @@ main, footer { position: relative; z-index: 1; }
 .faq-icon { width: 20px; height: 20px; flex: none; color: var(--sky); transition: transform 0.35s var(--ease); }
 .faq-item[open] .faq-icon { transform: rotate(45deg); }
 .faq-item p { padding: 0 1.2rem 1.2rem; color: var(--muted); }
+
+/* ============ Articles ============ */
+.article-list { display: grid; gap: 1.1rem; max-width: 900px; }
+.article-card { display: grid; gap: 0.8rem; padding: clamp(1.4rem, 3vw, 2rem); transition: border-color 0.3s, transform 0.4s var(--ease); }
+.article-card:hover { border-color: var(--line-strong); transform: translateY(-3px); }
+.article-card-title { font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.3; }
+.article-card-foot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.4rem; }
+.article-card-foot .work-link { margin: 0; padding: 0; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; color: var(--muted); font-weight: 600; font-size: 0.98rem; }
+.article-meta a { color: var(--sky); }
+.article-container { max-width: 780px; }
+.article-hero { padding-bottom: clamp(2rem, 4vw, 3rem); }
+.article-title { margin: 1.2rem 0 1rem; font-size: clamp(1.8rem, 4.2vw, 3rem); line-height: 1.15; }
+.article-body { font-size: 1.2rem; line-height: 1.75; color: #c9d3e1; padding-bottom: 2rem; }
+.article-body > * + * { margin-top: 1.3rem; }
+.article-body .article-h2 { margin-top: 2.6rem; font-size: clamp(1.2rem, 2.4vw, 1.5rem); color: var(--text); }
+.article-body ul, .article-body ol { padding-left: 1.3rem; display: grid; gap: 0.5rem; }
+.article-body li::marker { color: var(--sky); }
+.article-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; margin-block: 2rem; }
+.article-stats > div { background: var(--void); padding: 1.1rem 1.2rem; }
+.article-stats dd { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--sky); }
+.article-stats dt { color: var(--muted); font-size: 0.98rem; margin-top: 0.2rem; }
+@media (max-width: 640px) { .article-stats { grid-template-columns: 1fr; } }
+.case-link { margin-top: 1.25rem; border-style: solid; transition: border-color 0.3s, transform 0.4s var(--ease); }
+.case-link:hover { border-color: var(--line-strong); transform: translateY(-3px); }

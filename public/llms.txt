@@ -9,6 +9,8 @@
 - [Services](https://ryanzannah.online/services): Web design and development, SEO, branding and graphic design, content and social media
 - [Work](https://ryanzannah.online/work): Products in the QORVAYN ecosystem and client services
 - [QORVAYN](https://ryanzannah.online/qorvayn): The technology company Ryan founded, its mission, vision and founders
+- [Articles](https://ryanzannah.online/articles): Articles and case studies on web development, design and SEO
+- [Case study: rebuilding this portfolio](https://ryanzannah.online/articles/rebuilding-my-portfolio-nextjs-seo): Next.js, Framer Motion, mobile performance and SEO
 - [Contact](https://ryanzannah.online/contact): Email, phone and social links
 
 ## Products
