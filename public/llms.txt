@@ -1,0 +1,24 @@
+# Ryan Zannah
+
+> Ryan Zannah is a web developer, designer and SEO specialist based in Dhaka, Bangladesh, with more than five years of experience (freelancing since 2021, graphic designer at the X-Brain Info Tech agency in Kushtia from age 13). He is the founder of QORVAYN, a technology company founded on 10 March 2026 that builds eSkypixx, RYNEKA and GoalWear. He works remotely with clients worldwide and speaks English natively.
+
+## Pages
+
+- [Home](https://ryanzannah.online/): Overview of Ryan's work and the products he is building
+- [About](https://ryanzannah.online/about): His story, experience, timeline, skills and languages
+- [Services](https://ryanzannah.online/services): Web design and development, SEO, branding and graphic design, content and social media
+- [Work](https://ryanzannah.online/work): Products in the QORVAYN ecosystem and client services
+- [QORVAYN](https://ryanzannah.online/qorvayn): The technology company Ryan founded, its mission, vision and founders
+- [Contact](https://ryanzannah.online/contact): Email, phone and social links
+
+## Products
+
+- [eSkypixx](https://ryanzannah.online/eskypixx): AI-powered visual and social platform for nature, sky and photography (in development)
+- [RYNEKA](https://ryanzannah.online/ryneka): AI operating system concept to help people think, create and automate (concept and planning)
+- [GoalWear](https://ryanzannah.online/goalwear): Football jersey and streetwear e-commerce brand (https://goalwear.online)
+
+## Contact
+
+- Email: ryansstudio19@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ryanzannah24/
+- GitHub: https://github.com/ryansstudio19

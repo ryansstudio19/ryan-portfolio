@@ -7,6 +7,7 @@ const routes: { path: string; priority: number; changeFrequency: 'weekly' | 'mon
   { path: '', priority: 1, changeFrequency: 'weekly' },
   { path: '/about', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/work', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/services', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/qorvayn', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/eskypixx', priority: 0.7, changeFrequency: 'monthly' },

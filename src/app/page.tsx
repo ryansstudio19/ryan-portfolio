@@ -11,11 +11,11 @@ import { Magnetic, Marquee, Reveal, WordReveal } from '@/components/motion';
 import { marqueeSkills, qorvayn } from '@/data/site';
 
 export const metadata: Metadata = pageMeta({
-  title: 'Ryan Zannah | Software Engineer & Digital Builder',
+  title: 'Ryan Zannah | Web Developer, Designer & SEO in Dhaka',
   absoluteTitle: true,
   path: '/',
   og: 'home',
-  description: 'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh with 5+ years in web development, design and SEO. Founder of QORVAYN.',
+  description: 'Ryan Zannah is a web developer, designer and SEO specialist in Dhaka, Bangladesh with 5+ years of experience. Founder of QORVAYN. See my work and get in touch.',
 });
 
 export default function Home() {
@@ -49,9 +49,14 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.2}>
               <div style={{ marginTop: '2rem' }}>
-                <Magnetic>
-                  <Link href="/about" className="btn btn-ghost">Read my story <Arrow /></Link>
-                </Magnetic>
+                <div className="hero-actions" style={{ marginTop: 0 }}>
+                  <Magnetic>
+                    <Link href="/about" className="btn btn-ghost">Read my story <Arrow /></Link>
+                  </Magnetic>
+                  <Magnetic>
+                    <Link href="/services" className="btn btn-ghost">What I offer</Link>
+                  </Magnetic>
+                </div>
               </div>
             </Reveal>
           </div>

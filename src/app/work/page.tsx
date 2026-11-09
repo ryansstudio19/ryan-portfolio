@@ -8,7 +8,7 @@ import PageHero from '@/components/PageHero';
 import WorkGrid from '@/components/WorkGrid';
 
 export const metadata: Metadata = pageMeta({
-  title: 'Work & Services',
+  title: 'Work & Projects',
   path: '/work',
   og: 'work',
   description: 'Products and services by Ryan Zannah: eSkypixx, RYNEKA and GoalWear, plus web development, UI design, branding, SEO and content work for clients.',
@@ -50,6 +50,9 @@ export default function Work() {
             <WordReveal text="What I can do for you" className="h2" gradientWords={['you']} />
             <Reveal delay={0.1}>
               <p className="lead">Five years of freelance and agency work across design, development and growth.</p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <Magnetic><Link href="/services" className="btn btn-ghost btn-small">All services in detail <Arrow /></Link></Magnetic>
             </Reveal>
           </div>
           <Stagger className="feature-grid">

@@ -20,11 +20,11 @@ import { ScrollProgress } from '@/components/motion';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Ryan Zannah | Software Engineer & Digital Builder',
+    default: 'Ryan Zannah | Web Developer, Designer & SEO in Dhaka',
     template: '%s | Ryan Zannah',
   },
   description:
-    'Ryan Zannah is a software engineer and digital builder from Dhaka, Bangladesh with 5+ years in web development, design and SEO. Founder of QORVAYN.',
+    'Ryan Zannah is a web developer, designer and SEO specialist in Dhaka, Bangladesh with 5+ years of experience. Founder of QORVAYN. See my work and get in touch.',
   applicationName: 'Ryan Zannah',
   authors: [{ name: 'Ryan Zannah', url: SITE_URL }],
   creator: 'Ryan Zannah',

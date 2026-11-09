@@ -23,6 +23,13 @@ export const Copy = (p: P) => (
   <svg {...base} {...stroke} {...p}><rect x="8" y="8" width="12" height="12" rx="2" /><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></svg>
 );
 
+export const Check = (p: P) => (
+  <svg {...base} {...stroke} {...p}><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>
+);
+export const Plus = (p: P) => (
+  <svg {...base} {...stroke} {...p}><path d="M12 5v14M5 12h14" /></svg>
+);
+
 /* feature glyphs */
 export const Sparkle = (p: P) => (
   <svg {...base} {...stroke} {...p}><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6" /></svg>

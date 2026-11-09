@@ -11,9 +11,9 @@ const personNode = {
   name: person.name,
   url: SITE_URL,
   image: `${SITE_URL}/images/ryan/office-1000.webp`,
-  jobTitle: 'Software Engineer',
+  jobTitle: ['Software Engineer', 'Web Developer', 'SEO Specialist', 'Graphic Designer'],
   description:
-    'Software engineer and digital builder from Dhaka, Bangladesh with 5+ years of experience in web development, design and SEO.',
+    'Web developer, designer and SEO specialist from Dhaka, Bangladesh with 5+ years of experience. Founder of QORVAYN.',
   email: `mailto:${person.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'Dhaka', addressCountry: 'BD' },
   worksFor: { '@id': ORG_ID },
@@ -102,4 +102,40 @@ function crumbs(items: { name: string; path: string }[]) {
 /** Breadcrumb trail for inner pages. */
 export function Breadcrumbs({ items }: { items: { name: string; path: string }[] }) {
   return <Script data={{ '@context': 'https://schema.org', ...crumbs(items) }} />;
+}
+
+/** Services: each service offered by Ryan, plus the page's FAQ. */
+export function ServicesSchema({
+  items,
+  faqs,
+}: {
+  items: { id: string; name: string; intro: string }[];
+  faqs: { q: string; a: string }[];
+}) {
+  return (
+    <Script
+      data={{
+        '@context': 'https://schema.org',
+        '@graph': [
+          ...items.map((s) => ({
+            '@type': 'Service',
+            '@id': `${SITE_URL}/services#${s.id}`,
+            name: s.name,
+            description: s.intro,
+            serviceType: s.name,
+            url: `${SITE_URL}/services#${s.id}`,
+            provider: { '@id': PERSON_ID },
+            areaServed: [{ '@type': 'Country', name: 'Bangladesh' }, { '@type': 'Place', name: 'Worldwide' }],
+          })),
+          {
+            '@type': 'FAQPage',
+            '@id': `${SITE_URL}/services#faq`,
+            mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          },
+          personNode,
+          crumbs([{ name: 'Services', path: '/services' }]),
+        ],
+      }}
+    />
+  );
 }
