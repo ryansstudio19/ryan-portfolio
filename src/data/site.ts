@@ -133,7 +133,7 @@ export const skillGroups = [
   {
     name: 'Development',
     text: 'Building complete products, from interface to server.',
-    skills: ['Full-stack development', 'Web development', 'Back-end web development', 'Python', 'Next.js & React', 'Three.js & 3D web', 'Web site production', 'Mobile games'],
+    skills: ['Full-stack development', 'Web development', 'Back-end web development', 'Python', 'Next.js & React', 'Vite', 'Three.js & 3D web', 'Web site production', 'Mobile games'],
   },
   {
     name: 'Design',
@@ -165,12 +165,12 @@ export const marqueeSkills = [
   'Video editing',
 ];
 
-export type Language = { name: string; level: 'Native' | 'Elementary'; note?: string };
+export type Language = { name: string; level: 'Native' | 'Professional' | 'Elementary'; note?: string };
 
 export const languages: Language[] = [
   { name: 'English', level: 'Native', note: 'Duolingo English Test 130, Mar 2026' },
+  { name: 'French', level: 'Professional', note: 'Duolingo score 128, Nov 2026' },
   { name: 'German', level: 'Elementary', note: 'Duolingo score 13, Sep 2026' },
-  { name: 'French', level: 'Elementary' },
   { name: 'Spanish', level: 'Elementary' },
   { name: 'Italian', level: 'Elementary' },
   { name: 'Portuguese', level: 'Elementary' },

@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import { languages } from '@/data/site';
 
-const LEVEL = { Native: 5, Elementary: 2 } as const;
+const LEVEL = { Native: 5, Professional: 4, Elementary: 2 } as const;
+const LABEL = { Native: 'Native', Professional: 'Professional working proficiency', Elementary: 'Elementary proficiency' } as const;
 
 export default function LanguageList() {
   return (
@@ -18,7 +19,7 @@ export default function LanguageList() {
           transition={{ duration: 0.7, delay: (i % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="lang-name">{l.name}</span>
-          <span className="lang-level">{l.level === 'Native' ? 'Native' : 'Elementary proficiency'}</span>
+          <span className="lang-level">{LABEL[l.level]}</span>
           <span className="meter" aria-hidden="true">
             {Array.from({ length: 5 }).map((_, b) => (
               <motion.i
