@@ -30,7 +30,7 @@ export const photoWidths: Record<string, number[]> = {
 };
 
 export const socials = [
-  { label: 'LinkedIn', handle: 'Ryan Zannah', href: 'https://www.linkedin.com/in/ryanzannah24/', icon: 'linkedin' },
+  { label: 'LinkedIn', handle: 'Ryan Zannah', href: 'https://www.linkedin.com/in/ryanzannah/', icon: 'linkedin' },
   { label: 'GitHub', handle: 'ryansstudio19', href: 'https://github.com/ryansstudio19', icon: 'github' },
   { label: 'Instagram', handle: '@ryan.zannah', href: 'https://www.instagram.com/ryan.zannah/', icon: 'instagram' },
   { label: 'X', handle: '@ryan_zannah', href: 'https://x.com/ryan_zannah', icon: 'x' },
