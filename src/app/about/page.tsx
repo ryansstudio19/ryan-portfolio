@@ -70,7 +70,7 @@ export default function About() {
               </p>
               <p>
                 In March 2026 I founded <strong>QORVAYN</strong> with my co-founders. It&apos;s the parent company for
-                everything I build: <strong>eSkypixx</strong>, <strong>RYNEKA</strong> and <strong>GoalWear</strong>.
+                everything I build: <strong>Orbyn</strong>, <strong>GoalWear</strong>, <strong>eSkypixx</strong> and <strong>RYNEKA</strong>.
               </p>
               <p>
                 Away from the screen I&apos;m an athlete at heart. Cricket, football and competitive gaming taught me

@@ -51,7 +51,7 @@ export default function HomeHero() {
         </motion.p>
         <motion.p className="hero-sub" {...fade(0.4)}>
           I design and build digital products, from the first sketch to launch, and lead <strong>QORVAYN</strong>, the
-          technology company behind <strong>eSkypixx</strong>, <strong>RYNEKA</strong> and <strong>GoalWear</strong>.
+          technology company behind <strong>Orbyn</strong>, <strong>GoalWear</strong>, <strong>eSkypixx</strong> and <strong>RYNEKA</strong>.
         </motion.p>
         <motion.div className="hero-actions" {...fade(0.5)}>
           <Magnetic>

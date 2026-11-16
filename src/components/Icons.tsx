@@ -108,3 +108,18 @@ export const Brand = ({ name, ...p }: P & { name: string }) => {
       return null;
   }
 };
+export const Clock = (p: P) => (
+  <svg {...base} {...stroke} {...p}><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg>
+);
+export const Cloud = (p: P) => (
+  <svg {...base} {...stroke} {...p}><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18Z" /></svg>
+);
+export const Mic = (p: P) => (
+  <svg {...base} {...stroke} {...p}><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" /></svg>
+);
+export const Calendar = (p: P) => (
+  <svg {...base} {...stroke} {...p}><rect x="3.5" y="5" width="17" height="15" rx="2" /><path d="M3.5 10h17M8 3v4M16 3v4" /></svg>
+);
+export const Note = (p: P) => (
+  <svg {...base} {...stroke} {...p}><path d="M5 4h14v11l-5 5H5z" /><path d="M14 20v-5h5M8.5 9h7M8.5 12.5h4" /></svg>
+);

@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMeta({
   title: 'RYNEKA',
   path: '/ryneka',
   og: 'ryneka',
-  description: 'RYNEKA is an AI operating system concept from QORVAYN, designed to help people think, create, automate and manage their digital lives.',
+  description: 'RYNEKA is an AI operating system in planning at QORVAYN, designed to help people think, create, automate and manage their digital lives.',
 });
 
 const principles = [
@@ -33,7 +33,7 @@ export default function Ryneka() {
       <PageHero
         title="RYNEKA"
         gradientWords={['RYNEKA']}
-        badge={<span className="status">Concept & planning at QORVAYN</span>}
+        badge={<span className="status">Planning phase at QORVAYN</span>}
         aside={
           <TiltCard className="panel visual-type visual-indigo" max={7} style={{ position: 'relative', aspectRatio: '4 / 3.4', borderRadius: 22, overflow: 'hidden' }}>
             <svg className="pattern" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -73,7 +73,7 @@ export default function Ryneka() {
               understands what you&apos;re doing, helps you think it through, and takes care of repetitive steps.
             </p>
             <p>
-              It&apos;s a <strong>concept-stage</strong> product inside <strong>QORVAYN</strong>. Everything on this page
+              It&apos;s a <strong>planning-stage</strong> product inside <strong>QORVAYN</strong>. Everything on this page
               describes where it&apos;s headed, not a finished product.
             </p>
           </Reveal>
@@ -132,7 +132,7 @@ export default function Ryneka() {
       <section className="cta-band">
         <div className="container">
           <WordReveal text="Planning before building" className="h2" gradientWords={['building']} />
-          <Reveal delay={0.1}><p className="lead">RYNEKA is in the concept and planning phase. Follow along as it takes shape.</p></Reveal>
+          <Reveal delay={0.1}><p className="lead">RYNEKA is in the planning phase. Follow along as it takes shape.</p></Reveal>
           <Reveal delay={0.15} className="actions">
             <Magnetic><Link href="/contact" className="btn btn-primary">Follow the build <Arrow /></Link></Magnetic>
             <Magnetic><Link href="/qorvayn" className="btn btn-ghost">About QORVAYN</Link></Magnetic>

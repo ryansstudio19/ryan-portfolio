@@ -23,6 +23,80 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'building-orbyn-private-space-long-distance-couples',
+    title: 'Building Orbyn: a private home for couples who live apart',
+    description:
+      'Why I started building Orbyn at QORVAYN, what it does for long-distance couples, how its live photobooth works and what has to happen before the public launch.',
+    seoTitle: 'Building Orbyn: An App for Long-Distance Couples',
+    seoDescription:
+      'Ryan Zannah on building Orbyn, a private space for long-distance couples: two clocks on one dial, two skies, a live photobooth and privacy by design.',
+    date: '2026-11-16',
+    tags: ['Orbyn', 'QORVAYN', 'Product', 'Next.js'],
+    minutes: 5,
+    body: [
+      {
+        type: 'p',
+        text: 'Orbyn is the newest product at QORVAYN, the technology company I founded in March 2026. It is a private, calm space for two people who live in two places. The line I keep coming back to is the one on its home page: two places, one home. The beta is open now, and the public launch is planned for the coming months.',
+      },
+      { type: 'h2', text: 'The problem' },
+      {
+        type: 'p',
+        text: 'Couples who live apart keep their relationship going across a stack of apps: one for chat, one for calls, one for photos, one for notes. Each does its job, but none of them feels like a place the two of you share. Time zones make it harder. One person is going to sleep while the other is starting their day, and the small moments that make a relationship feel close get lost in between.',
+      },
+      {
+        type: 'p',
+        text: 'I wanted to build the opposite of a social network: no followers, no feed, no audience. Just one space that belongs to two people.',
+      },
+      { type: 'h2', text: 'What Orbyn does' },
+      {
+        type: 'ul',
+        items: [
+          'Two clocks, one dial: a 24-hour ring with noon at the top that shows both local times, so you can see who is awake and when you can talk',
+          'Two skies: each side follows its own real sky and local weather',
+          'Thinking of you: one tap sends a small light that arrives as a handwritten slip',
+          'A reunion countdown, shown in each person’s own time zone',
+          'Whispers: voice notes recorded before sleep and heard on waking',
+          'Memories and love notes: a polaroid vault, a corkboard and letters sealed until a date you choose',
+          'A date lounge with an AI date planner that understands both time zones',
+          'A daily check-in for mood, energy and sleep that takes about ten seconds',
+        ],
+      },
+      { type: 'h2', text: 'The photobooth is the heart of it' },
+      {
+        type: 'p',
+        text: 'The feature I am most excited about is the Photobooth. Both partners open it, both cameras go live side by side, and a synced countdown starts on both phones. Pick a scene and each phone cuts both people out of their rooms and places them in the same picture. At the end you design a photo strip and download or share it.',
+      },
+      {
+        type: 'p',
+        text: 'The background removal runs on the phone itself, so camera images are not sent to a server to make the cut-out. That was a deliberate choice: the most personal feature in the app should also be the most private one.',
+      },
+      { type: 'h2', text: 'Private by design' },
+      {
+        type: 'p',
+        text: 'Every Orbyn space holds exactly two people, and one partner joins through a private invite link that only works once. Photos, videos and voice notes sit in private storage. There are no ads, nothing in a space is used to sell anything, and a couple can delete their whole space whenever they want.',
+      },
+      { type: 'h2', text: 'How it is built' },
+      {
+        type: 'ul',
+        items: [
+          'Next.js, React and TypeScript for one web app that works on phones and computers and installs to the home screen',
+          'Framer Motion for the calm, smooth motion that runs through the whole app',
+          'Supabase for sign-in, the database, private file storage and the realtime updates that keep two phones in sync',
+          'Vercel for hosting, with every push to the main branch deployed automatically',
+        ],
+      },
+      { type: 'h2', text: 'What happens before launch' },
+      {
+        type: 'p',
+        text: 'Most of Orbyn already works end to end. The part that matters most, two real people using it at the same time on two phones in two places, is what I am testing next. After that come the final checks on privacy and reliability, and then the public launch. It will stay free to start, with a paid tier planned later.',
+      },
+      {
+        type: 'note',
+        text: 'Orbyn is in beta at orbyn-drab.vercel.app. If you are in a long-distance relationship and want to try it, I would love to hear what you think.',
+      },
+    ],
+  },
+  {
     slug: 'rebuilding-my-portfolio-nextjs-seo',
     title: 'How I rebuilt my portfolio with Next.js, Framer Motion and SEO in mind',
     description:

@@ -87,15 +87,33 @@ export type Product = {
   status: string;
   line: string;
   href: string;
-  accent: 'sky' | 'indigo' | 'pink' | 'emerald';
+  accent: 'sky' | 'indigo' | 'pink' | 'emerald' | 'rose';
 };
 
 export const products: Product[] = [
   {
+    slug: 'orbyn',
+    name: 'Orbyn',
+    kind: 'Private space for long-distance couples',
+    status: 'Beta, launching soon',
+    line: 'Two places. One home. A calm, private space for two people who live apart: two clocks, two skies, and a live photobooth that puts you side by side.',
+    href: '/orbyn',
+    accent: 'rose',
+  },
+  {
+    slug: 'goalwear',
+    name: 'GoalWear',
+    kind: 'Football streetwear brand',
+    status: 'Live',
+    line: 'Matchday player-edition drops, classic club kits and street culture. Built for matchday. Worn everywhere.',
+    href: '/goalwear',
+    accent: 'pink',
+  },
+  {
     slug: 'eskypixx',
     name: 'eSkypixx',
     kind: 'AI visual & social platform',
-    status: 'In development',
+    status: 'Planning',
     line: 'A platform for nature, sky and photography, with AI that helps every great capture find its audience.',
     href: '/eskypixx',
     accent: 'sky',
@@ -104,19 +122,10 @@ export const products: Product[] = [
     slug: 'ryneka',
     name: 'RYNEKA',
     kind: 'AI operating system',
-    status: 'Concept & planning',
+    status: 'Planning',
     line: 'An AI operating system that helps people think, create, automate and manage their digital lives.',
     href: '/ryneka',
     accent: 'indigo',
-  },
-  {
-    slug: 'goalwear',
-    name: 'GoalWear',
-    kind: 'Football streetwear brand',
-    status: 'E-commerce brand',
-    line: 'Matchday player-edition drops, classic club kits and street culture. Built for matchday. Worn everywhere.',
-    href: '/goalwear',
-    accent: 'pink',
   },
 ];
 
@@ -176,13 +185,13 @@ export const experience = [
     role: 'Founder & CEO',
     org: 'QORVAYN',
     when: 'Mar 2026 – now',
-    text: 'Founded the technology company behind eSkypixx, RYNEKA and GoalWear. I lead product, design and development.',
+    text: 'Founded the technology company behind Orbyn, GoalWear, eSkypixx and RYNEKA. I lead product, design and development.',
   },
   {
     role: 'Graphic designer',
     org: 'X-Brain Info Tech, Kushtia',
-    when: 'At age 13',
-    text: 'Designed graphics for clients at a local design agency while still a student. The agency has since closed.',
+    when: 'Jul – Nov 2023',
+    text: 'Designed graphics for clients at a local design agency at age 13, while still a student. The agency has since closed.',
   },
   {
     role: 'Freelancer',
@@ -195,11 +204,12 @@ export const experience = [
 export const timeline = [
   { year: '2021', title: 'Freelancing begins', text: 'Took on my first design and digital projects for clients, the start of more than five years of hands-on work.' },
   { year: '2022', title: 'Started coding', text: 'Wrote my first lines of Python and found the thing I wanted to keep doing: solving problems with software.' },
-  { year: 'Age 13', title: 'Graphic designer at X-Brain Info Tech', text: 'Worked as a graphic designer at X-Brain Info Tech, a design agency in Kushtia, while still a student.' },
+  { year: '2023', title: 'Graphic designer at X-Brain Info Tech', text: 'From July to November 2023, at age 13, I worked as a graphic designer at X-Brain Info Tech, a design agency in Kushtia, while still a student.' },
   { year: '2024', title: 'The eSkypixx idea', text: 'Sketched a platform dedicated to sky and nature photography, blending technology with the beauty of the natural world.' },
   { year: '2025', title: 'Preparing for Germany', text: 'Started learning German as the first step toward studying and working in Germany.' },
-  { year: 'Mar 2026', title: 'Founded QORVAYN', text: 'On 10 March 2026 I founded QORVAYN with co-founders Adelia Maharani and Siyami Muntaha Saba, the parent company for eSkypixx, RYNEKA and GoalWear.' },
+  { year: 'Mar 2026', title: 'Founded QORVAYN', text: 'On 10 March 2026 I founded QORVAYN with co-founders Adelia Maharani and Siyami Muntaha Saba, the parent company for my products.' },
   { year: '2026', title: 'Building full time', text: 'Completed my SSC examinations and moved fully into building QORVAYN products while sharpening my engineering skills.' },
+  { year: 'Nov 2026', title: 'Orbyn in beta', text: 'Opened the beta of Orbyn, a private space for long-distance couples, ahead of a public launch in the coming months.' },
   { year: '2027', title: 'Pearson Edexcel IAL A-Levels', text: 'Planned: Mathematics, Physics and Computer Science as a private candidate, building toward AS and A2 certification.' },
   { year: '2028', title: 'Final exams, then Germany', text: 'Planned: final A-Level session in January, results in March, alongside the move to Germany.' },
 ];

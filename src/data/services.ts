@@ -81,7 +81,7 @@ export const process = [
 ];
 
 export const reasons = [
-  { name: '5+ years of real work', text: 'Freelancing since 2021, and agency experience as a graphic designer from age 13.' },
+  { name: '5+ years of real work', text: 'Freelancing since 2021, and agency experience as a graphic designer in 2023, at age 13.' },
   { name: 'Design, code and SEO in one', text: 'One person who can design it, build it and get it ranking, without hand-offs.' },
   { name: 'Built to the same standard as this site', text: 'This website scores 100 for SEO and accessibility in Google Lighthouse.' },
   { name: 'Remote, worldwide', text: 'Based in Dhaka, Bangladesh, working with clients anywhere. Native English.' },

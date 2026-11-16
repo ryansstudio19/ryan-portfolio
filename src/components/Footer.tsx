@@ -22,6 +22,7 @@ export default function Footer() {
             <Link href="/services">Services</Link>
             <Link href="/articles">Articles</Link>
             <Link href="/qorvayn">QORVAYN</Link>
+            <Link href="/orbyn">Orbyn</Link>
             <Link href="/eskypixx">eSkypixx</Link>
             <Link href="/ryneka">RYNEKA</Link>
             <Link href="/goalwear">GoalWear</Link>

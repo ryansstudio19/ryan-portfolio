@@ -32,7 +32,7 @@ export default function GoalWear() {
       <PageHero
         title="GoalWear"
         gradientWords={['GoalWear']}
-        badge={<span className="status">QORVAYN e-commerce brand</span>}
+        badge={<span className="status">Live at goalwear.online</span>}
         aside={
           <TiltCard className="panel visual-type visual-pink" max={7} style={{ position: 'relative', aspectRatio: '4 / 3.4', borderRadius: 22, overflow: 'hidden' }}>
             <svg className="pattern" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">

@@ -1,6 +1,6 @@
 # Ryan Zannah
 
-> Ryan Zannah is a web developer, designer and SEO specialist based in Dhaka, Bangladesh, with more than five years of experience (freelancing since 2021, graphic designer at the X-Brain Info Tech agency in Kushtia from age 13). He is the founder of QORVAYN, a technology company founded on 10 March 2026 that builds eSkypixx, RYNEKA and GoalWear. He works remotely with clients worldwide and speaks English natively.
+> Ryan Zannah is a web developer, designer and SEO specialist based in Dhaka, Bangladesh, with more than five years of experience (freelancing since 2021, graphic designer at the X-Brain Info Tech agency in Kushtia July to November 2023, at age 13). He is the founder of QORVAYN, a technology company founded on 10 March 2026 that builds Orbyn, GoalWear, eSkypixx and RYNEKA. He works remotely with clients worldwide and speaks English natively.
 
 ## Pages
 
@@ -10,14 +10,16 @@
 - [Work](https://ryanzannah.online/work): Products in the QORVAYN ecosystem and client services
 - [QORVAYN](https://ryanzannah.online/qorvayn): The technology company Ryan founded, its mission, vision and founders
 - [Articles](https://ryanzannah.online/articles): Articles and case studies on web development, design and SEO
+- [Building Orbyn](https://ryanzannah.online/articles/building-orbyn-private-space-long-distance-couples): Why and how Ryan is building Orbyn, a private space for long-distance couples
 - [Case study: rebuilding this portfolio](https://ryanzannah.online/articles/rebuilding-my-portfolio-nextjs-seo): Next.js, Framer Motion, mobile performance and SEO
 - [Contact](https://ryanzannah.online/contact): Email, phone and social links
 
 ## Products
 
-- [eSkypixx](https://ryanzannah.online/eskypixx): AI-powered visual and social platform for nature, sky and photography (in development)
-- [RYNEKA](https://ryanzannah.online/ryneka): AI operating system concept to help people think, create and automate (concept and planning)
-- [GoalWear](https://ryanzannah.online/goalwear): Football jersey and streetwear e-commerce brand (https://goalwear.online)
+- [Orbyn](https://ryanzannah.online/orbyn): A private space for long-distance couples, "Two places. One home." In beta at https://orbyn-drab.vercel.app, public launch planned in the coming months
+- [GoalWear](https://ryanzannah.online/goalwear): Football jersey and streetwear e-commerce brand, live at https://goalwear.online
+- [eSkypixx](https://ryanzannah.online/eskypixx): AI-powered visual and social platform for nature, sky and photography (planning phase)
+- [RYNEKA](https://ryanzannah.online/ryneka): AI operating system to help people think, create and automate (planning phase)
 
 ## Contact
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMeta({
   title: 'QORVAYN',
   path: '/qorvayn',
   og: 'qorvayn',
-  description: 'QORVAYN is a technology company from Bangladesh, founded in March 2026, building intelligent, human-centered products: eSkypixx, RYNEKA and GoalWear.',
+  description: 'QORVAYN is a technology company from Bangladesh, founded in March 2026, building intelligent, human-centered products: Orbyn, GoalWear, eSkypixx and RYNEKA.',
 });
 
 export default function Qorvayn() {

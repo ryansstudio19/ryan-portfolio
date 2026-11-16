@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { products } from '@/data/site';
 import { Arrow } from './Icons';
 import { Reveal, TiltCard } from './motion';
+import OrbynDial from './OrbynDial';
 
 function PitchPattern() {
   return (
@@ -37,11 +38,30 @@ function NeuralPattern() {
 }
 
 export default function WorkGrid() {
-  const [sky, ryneka, goalwear] = products;
+  const by = (slug: string) => products.find((p) => p.slug === slug)!;
+  const [orbyn, sky, ryneka, goalwear] = [by('orbyn'), by('eskypixx'), by('ryneka'), by('goalwear')];
   return (
     <div className="work-grid">
       <Reveal from="left" className="work-cell full" amount={0.25}>
         <TiltCard className="work-card featured panel" max={5} data-cursor="VIEW">
+          <div className="work-visual visual-rose">
+            <OrbynDial className="dial" />
+          </div>
+          <div className="work-body">
+            <div className="work-top">
+              <span className="work-kind">{orbyn.kind}</span>
+              <span className="status">{orbyn.status}</span>
+            </div>
+            <h3 className="work-name">{orbyn.name}</h3>
+            <p className="work-line">{orbyn.line}</p>
+            <span className="work-link work-link-rose">EXPLORE ORBYN <Arrow /></span>
+          </div>
+          <Link href={orbyn.href} className="card-link" aria-label={`Open ${orbyn.name}`} />
+        </TiltCard>
+      </Reveal>
+
+      <Reveal from="right" className="work-cell full" amount={0.25}>
+        <TiltCard className="work-card featured reverse panel" max={5} data-cursor="VIEW">
           <div className="work-visual">
             <div className="visual-mosaic">
               <img src="/images/sky/mountain-900.webp" alt="" loading="lazy" />

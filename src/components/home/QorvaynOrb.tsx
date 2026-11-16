@@ -4,10 +4,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const nodes = [
-  { label: 'eSkypixx', angle: -60 },
-  { label: 'RYNEKA', angle: 40 },
+  { label: 'Orbyn', angle: -80 },
+  { label: 'eSkypixx', angle: -10 },
+  { label: 'RYNEKA', angle: 60 },
   { label: 'GoalWear', angle: 150 },
-  { label: 'Next…', angle: 235 },
+  { label: 'Next…', angle: 225 },
 ];
 
 // The QORVAYN mark at the centre of its ecosystem; rings turn as the page scrolls.

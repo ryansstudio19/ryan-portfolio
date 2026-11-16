@@ -12,6 +12,7 @@ const routes: { path: string; priority: number; changeFrequency: 'weekly' | 'mon
   { path: '/articles', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/qorvayn', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/orbyn', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/eskypixx', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/ryneka', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/goalwear', priority: 0.6, changeFrequency: 'monthly' },

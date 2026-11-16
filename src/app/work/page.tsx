@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMeta({
   title: 'Work & Projects',
   path: '/work',
   og: 'work',
-  description: 'Products and services by Ryan Zannah: eSkypixx, RYNEKA and GoalWear, plus web development, UI design, branding, SEO and content work for clients.',
+  description: 'Products and services by Ryan Zannah: Orbyn, GoalWear, eSkypixx and RYNEKA, plus web development, UI design, branding, SEO and content work for clients.',
 });
 
 const services = [

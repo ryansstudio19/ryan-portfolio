@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMeta({
   title: 'eSkypixx',
   path: '/eskypixx',
   og: 'eskypixx',
-  description: 'eSkypixx is an AI-powered visual and social platform for nature, sky and photography, in development at QORVAYN by Ryan Zannah.',
+  description: 'eSkypixx is an AI-powered visual and social platform for nature, sky and photography, in the planning phase at QORVAYN by Ryan Zannah.',
 });
 
 const features = [
@@ -37,7 +37,7 @@ export default function ESkypixx() {
       <PageHero
         title="eSkypixx"
         gradientWords={['eSkypixx']}
-        badge={<span className="status">In development at QORVAYN</span>}
+        badge={<span className="status">Planning phase at QORVAYN</span>}
         aside={
           <TiltCard className="photo" max={6} style={{ aspectRatio: '4 / 5', maxWidth: 420, marginInline: 'auto' }}>
             <img src="/images/sky/mountain-900.webp" alt="Mountain ridge under drifting cloud" />
